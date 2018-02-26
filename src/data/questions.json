@@ -1,8 +1,44 @@
-{"0" : 	
+{"1" : 	
 	{
 	"theme" : "ThemeTest",
 	"nature" : "Text",
 	"question" : "Question Test", 
+	"answers" :
+		[{
+		"number" : 1,
+		"visibility" : "True", 
+		"answer" :
+			{
+			"default" : "Answer 1 Test",
+			"accepted1" : "ans 1 test"
+			},
+		"hint" :
+			{ 
+			"nature" : "Text",
+			"is" :"hint1"
+			}	
+		} ,
+		{
+		"number" : 2,
+		"visibility" : "False", 
+		"answer" :
+			{
+			"default" : "Answer 2 Test",
+			"accepted1" : "ans 2 test"
+			},			
+		"hint" :
+			{ 
+			"nature" : "Text",
+			"is" :"ind2"					
+			}	
+		}]
+
+	},
+"2" : 	
+	{
+	"theme" : "History",
+	"nature" : "Image",
+	"question" : "Question Image Test", 
 	"answers" :
 		[{
 		"number" : 1,
