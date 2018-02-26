@@ -6,12 +6,12 @@ public class Answers {
     private String[] accepted;
     private String[] hint;
 
-    public void Answers(){
+    /*public void Answers(){
         accepted= new String[10];
         hint = new String[2];
-    }
+    }*/
 
-    public void Answers(int newNum_a, boolean newVisibility, String[] newAccepted, String[] newHint){
+    public Answers(int newNum_a, boolean newVisibility, String[] newAccepted, String[] newHint){
         num_a =newNum_a;
         visibility=newVisibility;
         accepted=newAccepted;
