@@ -3,17 +3,20 @@ package sample;
 public class Question {
     private int num_q;
     private String theme;
+    private boolean validated;
     private String nature; //{"text" or "image"}
     private String question; //{text or path of the image}
     private Answers[] answers;
 
-    public Question(int num_q, String theme) {
+    public Question(int num_q, String theme, boolean valid) {
         this.num_q = num_q;
         this.theme = theme;
+        this.validated = valid;
     }
-    public Question(int num_q, String theme, String nature, String question, Answers[] answers) {
+    public Question(int num_q, String theme, boolean valid, String nature, String question, Answers[] answers) {
         this.num_q = num_q;
         this.theme = theme;
+        this.validated = valid;
         this.nature = nature;
         this.question = question;
         this.answers = answers;
@@ -25,6 +28,10 @@ public class Question {
 
     public String getTheme() {
         return theme;
+    }
+
+    public boolean isValidated() {
+        return validated;
     }
 
     public String getNature() {

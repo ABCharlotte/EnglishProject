@@ -1,6 +1,7 @@
 {"1" : 	
 	{
 	"theme" : "ThemeTest",
+    "validated" : "False",
 	"nature" : "Text",
 	"question" : "Question Test", 
 	"answers" :
@@ -37,6 +38,7 @@
 "2" : 	
 	{
 	"theme" : "History",
+    "validated" : "True",
 	"nature" : "Image",
 	"question" : "Question Image Test", 
 	"answers" :
@@ -56,7 +58,7 @@
 		} ,
 		{
 		"number" : 2,
-		"visibility" : "False", 
+		"visibility" : "True",
 		"answer" :
 			[
 			"Answer 2 Test",

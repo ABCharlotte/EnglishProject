@@ -22,7 +22,8 @@ public class LoadQandA {
             for (int i = 1; i <= nbOfQuest ; i++) {
                 JSONObject quest= (JSONObject) jsonQuest.get(""+i+"");
                 String theme = (String) quest.get("theme");
-                Question question = new Question(i,theme);
+                boolean val = quest.get("validated").equals("True");
+                Question question = new Question(i,theme, val);
                 questions[i-1]=question;
             }
 
@@ -35,13 +36,14 @@ public class LoadQandA {
     }
 
     public static Question loadAnswers(int num_q){
-        Question question = new Question(num_q,"error");
+        Question question = new Question(num_q,"error",false);
         try {
             FileReader reader = new FileReader(filePath);
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonQuest = (JSONObject) jsonParser.parse(reader);
             JSONObject quest = (JSONObject) jsonQuest.get(""+num_q+"");
             String theme = (String) quest.get("theme");
+            boolean val = quest.get("validated").equals("True");
             String nature = (String) quest.get("nature");
             String text = (String) quest.get("question");
             JSONArray ansArray = (JSONArray) quest.get("answers");
@@ -61,7 +63,7 @@ public class LoadQandA {
                 hint[1]= (String) jsonHint.get("is");
                 answers[i]= new Answers(num_a,vis,accepted,hint);
             }
-            question = new Question(num_q,theme,nature,text,answers);
+            question = new Question(num_q,theme,val,nature,text,answers);
         } catch (ParseException e) {
             e.printStackTrace();
         } catch (IOException e) {
