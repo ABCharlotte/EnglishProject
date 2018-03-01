@@ -25,8 +25,8 @@ public class QuestionController {
             this.LabelQuestion.setText(question.getQuestion());
         }
         else{
-            this.ImageView.setFitHeight(200);
-            this.ImageView.setFitWidth(200);
+            this.ImageView.setFitHeight(300);
+            this.ImageView.setFitWidth(300);
             try {
                 FileInputStream inputStream = new FileInputStream(question.getQuestion());
                 Image im = new Image(inputStream);
