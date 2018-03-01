@@ -47,9 +47,10 @@ public class Controller {
         Question[] q = L.loadQuestions();
         for (int i=0;i<q.length;i++){
             Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
+            int temp = i;
             QuestionButton.setOnAction(event -> {
                 try {
-                    handleButtonAction();
+                    handleButtonAction(temp);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -57,7 +58,7 @@ public class Controller {
             addButton(QuestionButton,GridQuestion);
         }
     }
-    private void handleButtonAction() throws Exception{
+    private void handleButtonAction(int number) throws Exception{
         Stage stage;
         Parent root;
         //get reference to the button's stage
@@ -65,7 +66,12 @@ public class Controller {
         double height=stage.getHeight();
         double width=stage.getWidth();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getResource("Question.fxml"));
+        FXMLLoader fxmlLoader=new FXMLLoader();
+        root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
+        QuestionController questionController= (QuestionController) fxmlLoader.getController();
+        LoadQandA L = new LoadQandA();
+        Question q = L.loadAnswers(number);
+        questionController.initialize(q);
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
