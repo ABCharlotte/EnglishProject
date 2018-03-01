@@ -17,10 +17,8 @@ public class QuestionController {
     public Label LabelQuestion;
     public GridPane GridAnswers;
 
-    public void initialize() {
-    }
-
-    public QuestionController(){
+    public void initialize(Question question){
+        this.LabelQuestion.setText(question.getQuestion());
     }
     private void updateAnswers() {
     }
