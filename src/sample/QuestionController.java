@@ -20,7 +20,7 @@ public class QuestionController {
     public GridPane GridAnswers;
     public javafx.scene.image.ImageView ImageView;
 
-    private void initialize(Question question) throws MalformedURLException {
+    public void initialize(Question question) throws MalformedURLException {
         if(question.getNature().equals("Text")){
             this.LabelQuestion.setText(question.getQuestion());
         }
