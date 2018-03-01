@@ -27,7 +27,7 @@
     },
     "1": {
         "theme": "ThemeTest",       "validated": true,          "nature": "Image",
-        "question": "/data/image/test.jpg",
+        "question": "src/data/image/test.jpg",
         "answers": [
             {
                 "number": 1,        "visibility": true,
@@ -62,7 +62,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/england.jpeg"
+                    "is": "src/data/images/flags/england.jpeg"
                 }
             },
             {
@@ -72,7 +72,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/usa.jpeg"
+                    "is": "src/data/images/flags/usa.jpeg"
                 }
             },
             {
@@ -82,7 +82,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/australia.jpeg"
+                    "is": "src/data/images/flags/australia.jpeg"
                 }
             },
             {
@@ -92,7 +92,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/uk.jpeg"
+                    "is": "src/data/images/flags/uk.jpeg"
                 }
             },
             {
@@ -102,7 +102,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/ireland.jpeg"
+                    "is": "src/data/images/flags/ireland.jpeg"
                 }
             },
             {
@@ -112,7 +112,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/scotland.png"
+                    "is": "src/data/images/flags/scotland.png"
                 }
             },
             {
@@ -122,7 +122,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/india.png"
+                    "is": "src/data/images/flags/india.png"
                 }
             },
             {
@@ -132,7 +132,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/canada.png"
+                    "is": "src/data/images/flags/canada.png"
                 }
             },
             {
@@ -142,7 +142,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/nz.png"
+                    "is": "src/data/images/flags/nz.png"
                 }
             },
             {
@@ -152,7 +152,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/sa.png"
+                    "is": "src/data/images/flags/sa.png"
                 }
             }
 
@@ -209,7 +209,7 @@
                 ],
                 "hint": {
                     "nature": "Text",
-                    "is": "find, invente"
+                    "is": "Find, invent"
                 }
             }
 
