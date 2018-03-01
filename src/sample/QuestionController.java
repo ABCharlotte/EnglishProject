@@ -7,12 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import javax.xml.soap.Text;
-import java.awt.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 
 public class QuestionController {
     public Button BackButton;
@@ -20,14 +20,22 @@ public class QuestionController {
     public GridPane GridAnswers;
     public javafx.scene.image.ImageView ImageView;
 
-    public void initialize(Question question){
+    public void initialize(Question question) throws MalformedURLException {
         if(question.getNature().equals("Text")){
             this.LabelQuestion.setText(question.getQuestion());
         }
         else{
-            this.ImageView.setFitHeight(20%);
-            this.ImageView.setFitWidth(200);
-            this.ImageView.setImage(new Image(question.getQuestion()));
+            this.ImageView.setFitHeight(300);
+            this.ImageView.setFitWidth(300);
+            try {
+                FileInputStream inputStream = new FileInputStream(question.getQuestion());
+                Image im = new Image(inputStream);
+                this.ImageView.setImage(im);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            System.out.println(question.getQuestion());
+
         }
 
     }
