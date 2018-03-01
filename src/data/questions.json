@@ -112,7 +112,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/scotland.jpeg"
+                    "is": "data/images/flags/scotland.png"
                 }
             },
             {
@@ -122,17 +122,37 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/india.jpeg"
+                    "is": "data/images/flags/india.png"
                 }
             },
             {
                 "number": 8,        "visibility": false,
                 "answer": [
-                    "New Zeland", "new zeland", "zeland", "Zeland"
+                    "Canada", "canada"
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "data/images/flags/nz.jpeg"
+                    "is": "data/images/flags/canada.png"
+                }
+            },
+            {
+                "number": 9,        "visibility": false,
+                "answer": [
+                    "New Zealand", "new zealand", "zealand", "Zealand"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/nz.png"
+                }
+            },
+            {
+                "number": 10,        "visibility": false,
+                "answer": [
+                    "South Africa", "south africa", "africa", "Africa"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/sa.png"
                 }
             }
 
