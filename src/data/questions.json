@@ -1,75 +1,110 @@
-{"1" : 	
-	{
-	"theme" : "ThemeTest",
-    "validated" : "False",
-	"nature" : "Text",
-	"question" : "Question Test", 
-	"answers" :
-		[{
-		"number" : 1,
-		"visibility" : "True", 
-		"answer" :
-			[
-			"Answer 1 Test",
-			"ans 1 test"
-			],
-		"hint" :
-			{ 
-			"nature" : "Text",
-			"is" :"hint1"
-			}	
-		} ,
-		{
-		"number" : 2,
-		"visibility" : "False", 
-		"answer" :
-			[
-			"Answer 2 Test",
-			 "ans 2 test"
-			],			
-		"hint" :
-			{ 
-			"nature" : "Text",
-			"is" :"ind2"					
-			}	
-		}]
-
-	},
-"2" : 	
-	{
-	"theme" : "History",
-    "validated" : "True",
-	"nature" : "Image",
-	"question" : "Question Image Test", 
-	"answers" :
-		[{
-		"number" : 1,
-		"visibility" : "True", 
-		"answer" :
-			[
-			"Answer 1 Test",
-			"ans 1 test"
-			],
-		"hint" :
-			{ 
-			"nature" : "Text",
-			"is" :"hint1"
-			}	
-		} ,
-		{
-		"number" : 2,
-		"visibility" : "True",
-		"answer" :
-			[
-			"Answer 2 Test",
-			"ans 2 test"
-			],			
-		"hint" :
-			{ 
-			"nature" : "Text",
-			"is" :"ind2"					
-			}	
-		}]
-
-	}
+{
+    "1": {
+        "theme": "ThemeTest",       "validated": false,         "nature": "Text",
+        "question": "Question Test",
+        "answers": [
+            {
+                "number": 1,        "visibility": true,
+                "answer": [
+                    "Answer 1 Test", "ans 1 test"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "hint1"
+                }
+            },
+            {
+                "number": 2,        "visibility": false,
+                "answer": [
+                    "Answer 2 Test", "ans 2 test"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "ind2"
+                }
+            }
+        ]
+    },
+    "2": {
+        "theme": "ThemeTest",       "validated": true,          "nature": "Image",
+        "question": "Question Image Test",
+        "answers": [
+            {
+                "number": 1,        "visibility": true,
+                "answer": [
+                    "Answer 1 Test", "ans 1 test"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "hint1"
+                }
+            },
+            {
+                "number": 2,        "visibility": true,
+                "answer": [
+                    "Answer 2 Test", "ans 2 test"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "ind2"
+                }
+            }
+        ]
+    },
+    "3": {
+        "theme": "Geography",       "validated": false,         "nature": "Text",
+        "question": "English Speaking Countries",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "England", "england", "ENGLAND"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/england.jpeg"
+                }
+            },
+            {
+                "number": 2,        "visibility": false,
+                "answer": [
+                    "United States of America", "USA", "usa", "u.s.a.", "U.S.A.", "united states of america", "United States", "US", "U.S.", "us", "u.s."
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/usa.jpeg"
+                }
+            },
+            {
+                "number": 3,        "visibility": false,
+                "answer": [
+                    "Australia", "australia"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/australia.jpeg"
+                }
+            },
+            {
+                "number": 4,        "visibility": false,
+                "answer": [
+                    "United Kingdom", "united kingdom","UK","uk","U.K.","u.k."
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/uk.jpeg"
+                }
+            },
+            {
+                "number": 5,        "visibility": false,
+                "answer": [
+                    "Ireland", "ireland","North Ireland","north ireland","South Ireland","south ireland"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/ireland.jpeg"
+                }
+            }
+        ]
+    }
 }
