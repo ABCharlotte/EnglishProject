@@ -1,15 +1,11 @@
 package sample;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -23,6 +19,7 @@ public class Controller {
     private int column=0;
     private int row=0;
 
+    private LoadQandA L= new LoadQandA();
 
     public void initialize() {
         updateQuestions();
@@ -47,8 +44,9 @@ public class Controller {
         this.row=0;
         this.column=0;
         this.GridQuestion.getChildren().clear();
-        for (int i=0;i<50;i++){
-            Button QuestionButton = new Button("Question : "+i);
+        Question[] q = L.loadQuestions();
+        for (int i=0;i<q.length;i++){
+            Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
             QuestionButton.setOnAction(event -> {
                 try {
                     handleButtonAction();
