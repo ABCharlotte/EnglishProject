@@ -47,6 +47,9 @@ public class Controller {
         Question[] q = L.loadQuestions();
         for (int i=0;i<q.length;i++){
             Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
+            if(q[i].isValidated()){
+                QuestionButton.setStyle("-fx-background-color: #00ff00");
+            }
             int temp = i;
             QuestionButton.setOnAction(event -> {
                 try {

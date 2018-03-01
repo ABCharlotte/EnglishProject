@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -16,9 +18,18 @@ public class QuestionController {
     public Button BackButton;
     public Label LabelQuestion;
     public GridPane GridAnswers;
+    public javafx.scene.image.ImageView ImageView;
 
     public void initialize(Question question){
-        this.LabelQuestion.setText(question.getQuestion());
+        if(question.getNature().equals("Text")){
+            this.LabelQuestion.setText(question.getQuestion());
+        }
+        else{
+            this.ImageView.setFitHeight(200);
+            this.ImageView.setFitWidth(200);
+            this.ImageView.setImage(new Image(question.getQuestion()));
+        }
+
     }
     private void updateAnswers() {
     }
