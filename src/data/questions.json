@@ -25,7 +25,7 @@
             }
         ]
     },
-    "0bis": {
+    "1": {
         "theme": "ThemeTest",       "validated": true,          "nature": "Image",
         "question": "Question Image Test",
         "answers": [
@@ -51,7 +51,7 @@
             }
         ]
     },
-    "1": {
+    "2": {
         "theme": "Geography",       "validated": false,         "nature": "Text",
         "question": "English Speaking Countries",
         "answers": [
