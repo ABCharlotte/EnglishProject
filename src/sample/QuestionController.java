@@ -20,7 +20,7 @@ public class QuestionController {
     public GridPane GridAnswers;
     public javafx.scene.image.ImageView ImageView;
 
-    public void initialize(Question question) throws MalformedURLException {
+    private void initialize(Question question) throws MalformedURLException {
         if(question.getNature().equals("Text")){
             this.LabelQuestion.setText(question.getQuestion());
         }
@@ -34,7 +34,7 @@ public class QuestionController {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(question.getQuestion());
+            //System.out.println(question.getQuestion());
 
         }
 
