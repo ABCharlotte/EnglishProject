@@ -1,5 +1,5 @@
 {
-    "1": {
+    "0": {
         "theme": "ThemeTest",       "validated": false,         "nature": "Text",
         "question": "Question Test",
         "answers": [
@@ -25,7 +25,7 @@
             }
         ]
     },
-    "2": {
+    "0bis": {
         "theme": "ThemeTest",       "validated": true,          "nature": "Image",
         "question": "Question Image Test",
         "answers": [
@@ -51,7 +51,7 @@
             }
         ]
     },
-    "3": {
+    "1": {
         "theme": "Geography",       "validated": false,         "nature": "Text",
         "question": "English Speaking Countries",
         "answers": [
@@ -104,7 +104,38 @@
                     "nature": "Image",
                     "is": "data/images/flags/ireland.jpeg"
                 }
+            },
+            {
+                "number": 6,        "visibility": false,
+                "answer": [
+                    "Scotland", "scotland"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/scotland.jpeg"
+                }
+            },
+            {
+                "number": 7,        "visibility": false,
+                "answer": [
+                    "India", "india"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/india.jpeg"
+                }
+            },
+            {
+                "number": 8,        "visibility": false,
+                "answer": [
+                    "New Zeland", "new zeland", "zeland", "Zeland"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/nz.jpeg"
+                }
             }
+
         ]
     }
 }
