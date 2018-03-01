@@ -27,7 +27,7 @@
     },
     "1": {
         "theme": "ThemeTest",       "validated": true,          "nature": "Image",
-        "question": "src/data/image/test.jpg",
+        "question": "images/test.jpg",
         "answers": [
             {
                 "number": 1,        "visibility": true,

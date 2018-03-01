@@ -25,7 +25,7 @@ public class QuestionController {
             this.LabelQuestion.setText(question.getQuestion());
         }
         else{
-            this.ImageView.setFitHeight(200);
+            this.ImageView.setFitHeight(20%);
             this.ImageView.setFitWidth(200);
             this.ImageView.setImage(new Image(question.getQuestion()));
         }
