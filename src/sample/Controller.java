@@ -28,7 +28,7 @@ public class Controller {
         updateQuestions();
     }
 
-    public void addButton(Button button, GridPane grid) {
+    private void addButton(Button button, GridPane grid) {
         button.setMinSize(100,100);
         grid.add(button, column, row);
         int div = (int) (this.QuestionScrollPane.getWidth()/120);
@@ -64,11 +64,15 @@ public class Controller {
         Parent root;
         //get reference to the button's stage
         stage=(Stage) GridQuestion.getScene().getWindow();
+        double height=stage.getHeight();
+        double width=stage.getWidth();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getResource("Question.fxml"));
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setHeight(height);
+        stage.setWidth(width);
         stage.show();
     }
 }
