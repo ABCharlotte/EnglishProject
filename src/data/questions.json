@@ -157,5 +157,112 @@
             }
 
         ]
+    },
+    "3": {
+        "theme": "Grammar",       "validated": false,         "nature": "Text",
+        "question": "PHRASAL VERBS \n to come ____ ",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "England", "england", "ENGLAND"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/england.jpeg"
+                }
+            },
+            {
+                "number": 2,        "visibility": false,
+                "answer": [
+                    "United States of America", "USA", "usa", "u.s.a.", "U.S.A.", "united states of america", "United States", "US", "U.S.", "us", "u.s."
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/usa.jpeg"
+                }
+            },
+            {
+                "number": 3,        "visibility": false,
+                "answer": [
+                    "Australia", "australia"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/australia.jpeg"
+                }
+            },
+            {
+                "number": 4,        "visibility": false,
+                "answer": [
+                    "United Kingdom", "united kingdom","UK","uk","U.K.","u.k."
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/uk.jpeg"
+                }
+            },
+            {
+                "number": 5,        "visibility": false,
+                "answer": [
+                    "Ireland", "ireland","North Ireland","north ireland","South Ireland","south ireland"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/ireland.jpeg"
+                }
+            },
+            {
+                "number": 6,        "visibility": false,
+                "answer": [
+                    "Scotland", "scotland"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/scotland.png"
+                }
+            },
+            {
+                "number": 7,        "visibility": false,
+                "answer": [
+                    "India", "india"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/india.png"
+                }
+            },
+            {
+                "number": 8,        "visibility": false,
+                "answer": [
+                    "Canada", "canada"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/canada.png"
+                }
+            },
+            {
+                "number": 9,        "visibility": false,
+                "answer": [
+                    "New Zealand", "new zealand", "zealand", "Zealand"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/nz.png"
+                }
+            },
+            {
+                "number": 10,        "visibility": false,
+                "answer": [
+                    "South Africa", "south africa", "africa", "Africa"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "data/images/flags/sa.png"
+                }
+            }
+
+        ]
     }
 }
