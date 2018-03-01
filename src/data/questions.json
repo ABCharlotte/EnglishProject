@@ -27,7 +27,7 @@
     },
     "1": {
         "theme": "ThemeTest",       "validated": true,          "nature": "Image",
-        "question": "Question Image Test",
+        "question": "/data/image/test.jpg",
         "answers": [
             {
                 "number": 1,        "visibility": true,
@@ -165,101 +165,51 @@
             {
                 "number": 1,        "visibility": false,
                 "answer": [
-                    "England", "england", "ENGLAND"
+                    "Back", "back"
                 ],
                 "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/england.jpeg"
+                    "nature": "Text",
+                    "is": "Return"
                 }
             },
             {
                 "number": 2,        "visibility": false,
                 "answer": [
-                    "United States of America", "USA", "usa", "u.s.a.", "U.S.A.", "united states of america", "United States", "US", "U.S.", "us", "u.s."
+                    "In","in"
                 ],
                 "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/usa.jpeg"
+                    "nature": "Text",
+                    "is": "Enter"
                 }
             },
             {
                 "number": 3,        "visibility": false,
                 "answer": [
-                    "Australia", "australia"
+                    "Out","out"
                 ],
                 "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/australia.jpeg"
+                    "nature": "Text",
+                    "is": "Exit"
                 }
             },
             {
                 "number": 4,        "visibility": false,
                 "answer": [
-                    "United Kingdom", "united kingdom","UK","uk","U.K.","u.k."
+                    "Over","over"
                 ],
                 "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/uk.jpeg"
+                    "nature": "Text",
+                    "is": "Pass By"
                 }
             },
             {
                 "number": 5,        "visibility": false,
                 "answer": [
-                    "Ireland", "ireland","North Ireland","north ireland","South Ireland","south ireland"
+                    "Up With", "up with"
                 ],
                 "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/ireland.jpeg"
-                }
-            },
-            {
-                "number": 6,        "visibility": false,
-                "answer": [
-                    "Scotland", "scotland"
-                ],
-                "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/scotland.png"
-                }
-            },
-            {
-                "number": 7,        "visibility": false,
-                "answer": [
-                    "India", "india"
-                ],
-                "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/india.png"
-                }
-            },
-            {
-                "number": 8,        "visibility": false,
-                "answer": [
-                    "Canada", "canada"
-                ],
-                "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/canada.png"
-                }
-            },
-            {
-                "number": 9,        "visibility": false,
-                "answer": [
-                    "New Zealand", "new zealand", "zealand", "Zealand"
-                ],
-                "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/nz.png"
-                }
-            },
-            {
-                "number": 10,        "visibility": false,
-                "answer": [
-                    "South Africa", "south africa", "africa", "Africa"
-                ],
-                "hint": {
-                    "nature": "Image",
-                    "is": "data/images/flags/sa.png"
+                    "nature": "Text",
+                    "is": "find, invente"
                 }
             }
 
