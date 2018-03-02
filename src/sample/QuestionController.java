@@ -40,7 +40,8 @@ public class QuestionController {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(question.getQuestion());
+            //System.out.println(question.getQuestion());
+
         }
         updateAnswers();
 

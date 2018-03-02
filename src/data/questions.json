@@ -62,7 +62,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "src/data/images/flags/england.jpeg"
+                    "is": "src/data/images/flags/england.png"
                 }
             },
             {
@@ -72,7 +72,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "src/data/images/flags/usa.jpeg"
+                    "is": "src/data/images/flags/usa.png"
                 }
             },
             {
@@ -82,7 +82,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "src/data/images/flags/australia.jpeg"
+                    "is": "src/data/images/flags/australia.png"
                 }
             },
             {
@@ -92,7 +92,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "src/data/images/flags/uk.jpeg"
+                    "is": "src/data/images/flags/uk.png"
                 }
             },
             {
@@ -102,7 +102,7 @@
                 ],
                 "hint": {
                     "nature": "Image",
-                    "is": "src/data/images/flags/ireland.jpeg"
+                    "is": "src/data/images/flags/ireland.png"
                 }
             },
             {
@@ -213,6 +213,168 @@
                 }
             }
 
+        ]
+    },
+    "4": {
+        "theme": "History",       "validated": false,          "nature": "Image",
+        "question": "src/data/images/raven_london.png",
+        "answers": [
+            {
+                "number": 1,        "visibility": true,
+                "answer": [
+                    "Ravens", "raven", "Crow", "crow", "ravens", "Raven", "crows", "Crows", "Ravens of the Tower of London"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "R _ _ _ _ _"
+                }
+            },
+            {
+                "number": 2,        "visibility": true,
+                "answer": [
+                    "Tower of London", "London", "london", "tower of london", "tower of London"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "T _ _ _ _        _ _        L _ _ _ _ _"
+                }
+            },
+            {
+                "number": 3,        "visibility": false,
+                "answer": [
+                    "Crown", "crown", "queen", "Queen", "Crown of England", "crown of England"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "C _ _ _ _"
+                }
+            },
+            {
+                "number": 4,        "visibility": true,
+                "answer": [
+                    "England", "United Kingdom", "england", "u.k.","UK","uk","U.K.","united kingdom"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "src/data/images/flags/uk.png"
+                }
+            },
+            {
+                "number": 4,        "visibility": false,
+                "answer": [
+                    "Bobby", "bobby", "guard","Guard"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "B _ _ _ _ "
+                }
+            }
+        ]
+    },
+    "5": {
+        "theme": "Culture",       "validated": false,         "nature": "Text",
+        "question": "New York City",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "United States of America", "USA", "usa", "u.s.a.", "U.S.A.", "united states of america", "United States", "US", "U.S.", "us", "u.s."
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "src/data/images/flags/usa.png"
+                }
+            },
+            {
+                "number": 2,        "visibility": false,
+                "answer": [
+                    "Manhattan","manhattan","Big Apple","big apple","Queens","queens","Bronx","bronx","Staten Island", "staten island", "Brooklyn","brooklyn"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "District"
+                }
+            }
+        ]
+    },
+    "6": {
+        "theme": "History",       "validated": false,         "nature": "Text",
+        "question": "King or Queen of England",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "Back", "back"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "Return"
+                }
+            }
+        ]
+    },
+    "7": {
+        "theme": "Vocabulary",       "validated": false,         "nature": "Text",
+        "question": "PHRASAL VERBS \n to come ____ ",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "Back", "back"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "Return"
+                }
+            }
+        ]
+    },
+    "8": {
+        "theme": "Geography",       "validated": false,         "nature": "Text",
+        "question": "PHRASAL VERBS \n to come ____ ",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "Back", "back"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "Return"
+                }
+            }
+        ]
+    },
+    "9": {
+        "theme": "Culture",       "validated": false,         "nature": "Text",
+        "question": "PHRASAL VERBS \n to come ____ ",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "Back", "back"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "Return"
+                }
+            }
+        ]
+    },
+    "10": {
+        "theme": "History",       "validated": false,         "nature": "Text",
+        "question": "PHRASAL VERBS \n to come ____ ",
+        "answers": [
+            {
+                "number": 1,        "visibility": false,
+                "answer": [
+                    "Back", "back"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "Return"
+                }
+            }
         ]
     }
 }
