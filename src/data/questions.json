@@ -265,7 +265,7 @@
                     "Bobby", "bobby", "guard","Guard"
                 ],
                 "hint": {
-                    "nature": "Image",
+                    "nature": "Text",
                     "is": "B _ _ _ _ "
                 }
             }

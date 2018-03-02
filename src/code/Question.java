@@ -1,4 +1,4 @@
-package sample;
+package code;
 
 public class Question {
     private int num_q;
