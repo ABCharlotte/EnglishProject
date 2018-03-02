@@ -61,7 +61,7 @@ public class Controller {
             addButton(QuestionButton,GridQuestion);
         }
     }
-    private void handleButtonAction(int number) throws Exception{
+    private void handleButtonAction(int number_q) throws Exception{
         Stage stage;
         Parent root;
         //get reference to the button's stage
@@ -73,7 +73,7 @@ public class Controller {
         root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
         QuestionController questionController= (QuestionController) fxmlLoader.getController();
         JsonTools L = new JsonTools();
-        Question q = L.loadAnswers(number);
+        Question q = L.loadAnswers(number_q);
         questionController.initialize(q);
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);

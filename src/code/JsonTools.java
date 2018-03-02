@@ -51,7 +51,7 @@ public class JsonTools {
             String nature = (String) quest.get("nature");
             String text = (String) quest.get("question");
             JSONArray ansArray = (JSONArray) quest.get("answers");
-            Answers[] answers = new Answers[ansArray.size()];
+            Answer[] answers = new Answer[ansArray.size()];
             for (int i = 0; i < ansArray.size() ; i++) {
                 JSONObject ans= (JSONObject) ansArray.get(i);
                 int num_a = (int) ((long)ans.get("number"));
@@ -65,7 +65,7 @@ public class JsonTools {
                 String[] hint = new String[2];
                 hint[0]= (String) jsonHint.get("nature");
                 hint[1]= (String) jsonHint.get("is");
-                answers[i]= new Answers(num_a,vis,accepted,hint);
+                answers[i]= new Answer(num_a,vis,accepted,hint);
             }
             question = new Question(num_q,theme,val,nature,text,answers);
         } catch (ParseException e) {
@@ -74,6 +74,12 @@ public class JsonTools {
             e.printStackTrace();
         }
         return question;
+    }
+
+    public void validQuestion(Question question){}
+
+    public void validAnswer(Answer answer){
+
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -85,36 +91,6 @@ public class JsonTools {
         System.out.println(q[0].getTheme());
         Question qAndA = L.loadAnswers(0);
         System.out.println(qAndA.getAnswers()[1].getAccepted()[0]);
-        /*
-
-        //Gson g = new Gson();
-        try {
-            //System.out.println("panda in the loop !");
-
-            // read the json file
-            FileReader reader = new FileReader(filePath);
-            JSONParser jsonParser = new JSONParser();
-
-            //JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-            //String firstName = (String) jsonObject.get("firstName");
-            //System.out.println("The first name is: " + firstName);
-
-            JSONObject jsonQuest = (JSONObject) jsonParser.parse(reader);
-            JSONObject quest0= (JSONObject) jsonQuest.get("1");
-            String a = (String) quest0.get("theme");
-            System.out.println(a);
-            JSONArray ansArray = (JSONArray) quest0.get("answers");
-            for (int i = 0; i < ansArray.size() ; i++) {
-                JSONObject ans= (JSONObject) ansArray.get(i);
-                boolean aa = ans.get("visibility").equals("True");
-                System.out.println(aa);
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
     }
 }
 

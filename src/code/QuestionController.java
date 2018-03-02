@@ -65,21 +65,21 @@ public class QuestionController {
             this.column=0;
             this.GridAnswers.getChildren().clear();
             for (int i=0;i<this.activeQuestion.getAnswers().length;i++){
-                Answers answers =this.activeQuestion.getAnswers()[i];
-                Button AnswersButton = new Button(""+i);
-                if(answers.isVisibility()){
-                    AnswersButton.setStyle("-fx-background-color: #00ff00");
-                    AnswersButton.setText(answers.getAccepted()[0]);
+                Answer answer =this.activeQuestion.getAnswers()[i];
+                Button AnswerButton = new Button(""+i);
+                if(answer.isVisibility()){
+                    AnswerButton.setStyle("-fx-background-color: #00ff00");
+                    AnswerButton.setText(answer.getAccepted()[0]);
                 }
                 int temp = i;
-                AnswersButton.setOnAction(event -> {
+                AnswerButton.setOnAction(event -> {
                     try {
-                        handleAnswersButton(answers);
+                        handleAnswerButton(answer);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
-                addButton(AnswersButton,GridAnswers);
+                addButton(AnswerButton,GridAnswers);
             }
         }
 
@@ -100,17 +100,17 @@ public class QuestionController {
         stage.setWidth(width);
         stage.show();
     }
-    private void handleAnswersButton(Answers answers){
+    private void handleAnswerButton(Answer answer){
         this.GridAnswers.getChildren().clear();
-        if(answers.getHint()[0].equals("Text")) {
-            this.GridAnswers.add(new Label(answers.getHint()[1]),0,0);
+        if(answer.getHint()[0].equals("Text")) {
+            this.GridAnswers.add(new Label(answer.getHint()[1]),0,0);
         }
         else{
             ImageView imageView = new ImageView();
             imageView.setFitHeight(300);
             imageView.setFitWidth(300);
             try {
-                imageView.setImage(new Image(new FileInputStream(answers.getHint()[1])));
+                imageView.setImage(new Image(new FileInputStream(answer.getHint()[1])));
                 this.GridAnswers.add(imageView,0,1);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
