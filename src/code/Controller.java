@@ -19,7 +19,7 @@ public class Controller {
     private int column=0;
     private int row=0;
 
-    private LoadQandA L= new LoadQandA();
+    private JsonTools L= new JsonTools();
 
     public void initialize() {
         updateQuestions();
@@ -72,7 +72,7 @@ public class Controller {
         FXMLLoader fxmlLoader=new FXMLLoader();
         root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
         QuestionController questionController= (QuestionController) fxmlLoader.getController();
-        LoadQandA L = new LoadQandA();
+        JsonTools L = new JsonTools();
         Question q = L.loadAnswers(number);
         questionController.initialize(q);
         //create a new scene with root and set the stage

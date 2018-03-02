@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LoadQandA {
+public class JsonTools {
     private static final String filePath = "src/data/questions.json";
     //private static int nbOfQuest=3;
 
@@ -80,7 +80,7 @@ public class LoadQandA {
 
         System.out.println("panda !");
 
-        LoadQandA L = new LoadQandA();
+        JsonTools L = new JsonTools();
         Question[] q= L.loadQuestions();
         System.out.println(q[0].getTheme());
         Question qAndA = L.loadAnswers(0);
