@@ -76,62 +76,80 @@ public class JsonTools {
         return question;
     }
 
-    public void validQuestion(Question question){
-
+    public void validQuestion(Question question) throws IOException, ParseException {
+        FileReader reader = new FileReader(filePath);
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
+        JSONObject quest = (JSONObject) jsonFile.get(""+question.getNum_q()+"");
+        quest.put("validated",new Boolean(true));
+        reader.close();
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(jsonFile.toJSONString());
+            writer.flush();
+        }
     }
 
-    public void validAnswer(Question question, int num_a){
+    public void validAnswer(Question question, int num_a) throws IOException, ParseException {
+        FileReader reader = new FileReader(filePath);
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
+        JSONObject quest = (JSONObject) jsonFile.get(""+question.getNum_q()+"");
+        JSONArray answers = (JSONArray) quest.get("answers");
+        JSONObject a = (JSONObject) answers.get(num_a-1);
+        a.put("visibility", new Boolean(true));
+        //System.out.println(a.get("visibility"));
+        /*answers.set(2,a);
+        quest.put("answers",answers);
+        jsonFile.put("2",quest);
+        */
+        reader.close();
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(jsonFile.toJSONString());
+            writer.flush();
+            //System.out.println("Successfully Copied JSON Object to File...");
+            //System.out.println("\nJSON Object: " + jsonFile);
+        }/*
+        try (FileWriter writer = new FileWriter(filePath)) {
+            JSONWriter jsonWriter = new JSONWriter(writer);
+            jsonWriter.object("2");
+            jsonWriter.object();
+            jsonWriter.key("2");
+            jsonWriter.value(a);
+            jsonWriter.endObject();
+            writer.flush();
+            System.out.println("Successfully Copied JSON Object to File...");
+            System.out.println("\nJSON Object: ");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }*/
 
-
-
-
+//verification if Question must be validated
+        boolean toValid=true;
+        int i=0;
+        while(toValid && i <answers.size()) {
+            JSONObject ans= (JSONObject) answers.get(i);
+            toValid = ans.get("visibility").equals(true);
+            i++;
+        }
+        if (toValid) {
+            validQuestion(question);
+        }
     }
 
     public static void main(String[] args) throws IOException, ParseException {
 
         System.out.println("panda !");
 
-        //JsonTools L = new JsonTools();
-        //Question[] q= L.loadQuestions();
+        JsonTools L = new JsonTools();
+        Question[] q= L.loadQuestions();
         //System.out.println(q[0].getTheme());
-        //Question qAndA = L.loadAnswers(2);
+        Question qAndA = L.loadAnswers(7);
+        System.out.println(qAndA.getAnswers()[0].getAccepted()[1]);
         //System.out.println(qAndA.getAnswers()[2].getAccepted()[0]);
         //System.out.println(qAndA.getAnswers()[2].isVisibility());
-        //L.validAnswer(qAndA,2);
-        //qAndA = L.loadAnswers(2);
+        //L.validAnswer(qAndA,1);
         //System.out.println(qAndA.getAnswers()[2].isVisibility());
-
-        /*FileReader reader = new FileReader(filePath);
-        JSONParser jsonParser = new JSONParser();
-        JSONObject jsonQuest = (JSONObject) jsonParser.parse(reader);
-        JSONObject quest = (JSONObject) jsonQuest.get(""+2+"");
-        JSONArray answers = (JSONArray) quest.get("answers");
-        JSONObject a = (JSONObject) answers.get(2);
-        System.out.println(a.get("visibility"));
-        a.put("visibility", new Boolean(true));
-        System.out.println(a.get("visibility"));*/
-        FileReader reader = new FileReader(filePath);
-        JSONParser jsonParser = new JSONParser();
-        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
-        JSONObject quest = (JSONObject) jsonFile.get(""+2+"");
-        JSONArray answers = (JSONArray) quest.get("answers");
-        JSONObject a = (JSONObject) answers.get(2);
-        System.out.println(a.get("visibility"));
-        a.remove("visibility");
-        //a.put("visibility", new Boolean(true));
-        System.out.println(a.get("visibility"));
-        //answers.set(2,a);
-        //quest.put("answers",answers);
-        //jsonFile.put("2",quest);
-        //reader.close();
-        System.out.println(jsonFile);
-        try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(jsonFile.toJSONString());
-            writer.flush();
-            System.out.println("Successfully Copied JSON Object to File...");
-            System.out.println("\nJSON Object: " + jsonFile);
-        }
-
+        System.out.println(qAndA.checkAnswers("back"));
 
     }
 }

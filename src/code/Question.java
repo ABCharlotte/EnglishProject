@@ -1,5 +1,9 @@
 package code;
 
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
+
 public class Question {
     private int num_q;
     private String theme;
@@ -44,5 +48,19 @@ public class Question {
 
     public Answer[] getAnswers() {
         return answers;
+    }
+
+    public boolean checkAnswers(String toTest) throws IOException, ParseException {
+        for (int i = 0; i < this.answers.length ; i++) {
+            String[] accepted = answers[i].getAccepted();
+            for (int j = 0; j < accepted.length ; j++) {
+                if (accepted[j].equalsIgnoreCase(toTest)){
+                    JsonTools J = new JsonTools();
+                    J.validAnswer(this,i+1);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

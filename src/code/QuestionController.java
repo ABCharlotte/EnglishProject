@@ -11,9 +11,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import org.json.simple.parser.ParseException;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 public class QuestionController {
@@ -68,9 +70,11 @@ public class QuestionController {
             this.row=0;
             this.column=0;
             this.GridAnswers.getChildren().clear();
+            JsonTools j = new JsonTools();
+            activeQuestion=j.loadAnswers(activeQuestion.getNum_q());
             for (int i=0;i<this.activeQuestion.getAnswers().length;i++){
                 Answer answer =this.activeQuestion.getAnswers()[i];
-                Button AnswerButton = new Button(""+i);
+                Button AnswerButton = new Button(""+answer.getNum_a());
                 if(answer.isVisibility()){
                     AnswerButton.setStyle("-fx-background-color: #00ff00");
                     AnswerButton.setText(answer.getAccepted()[0]);
@@ -126,10 +130,14 @@ public class QuestionController {
     }
 
     @FXML
-    private void handleOK(){
+    private void handleOK() throws IOException, ParseException {
         String answerString = this.AnswerText.getText();
-        System.out.println(answerString);
-        updateAnswers();
-        this.ErrorLabel.setText("Error");
+        if(this.activeQuestion.checkAnswers(answerString)){
+            this.ErrorLabel.setText("YES !");
+            this.AnswerText.clear();
+        }else {
+            this.ErrorLabel.setText("Error");
+        }
+        this.updateAnswers();
     }
 }
