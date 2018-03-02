@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -20,6 +21,9 @@ public class QuestionController {
     public Label LabelQuestion;
     public GridPane GridAnswers;
     public javafx.scene.image.ImageView ImageView;
+    public TextField AnswerText;
+    public Button OKButton;
+    public Label ErrorLabel;
     private int row;
     private int column;
     private Question activeQuestion;
@@ -119,5 +123,13 @@ public class QuestionController {
         Button BackQuestionButton = new Button("Back to the question");
         BackQuestionButton.setOnAction(event -> updateAnswers());
         this.GridAnswers.add(BackQuestionButton,0,2);
+    }
+
+    @FXML
+    private void handleOK(){
+        String answerString = this.AnswerText.getText();
+        System.out.println(answerString);
+        updateAnswers();
+        this.ErrorLabel.setText("Error");
     }
 }

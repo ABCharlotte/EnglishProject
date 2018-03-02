@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.QuestionController">
@@ -28,30 +28,48 @@
         </Label>
     </top>
     <bottom>
-        <BorderPane maxHeight="70.0" maxWidth="800.0" minHeight="60.0" minWidth="800.0" prefHeight="60.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <BorderPane maxHeight="101.0" maxWidth="800.0" minHeight="60.0" minWidth="800.0" prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
             <left>
                 <Button fx:id="BackButton" mnemonicParsing="false" onAction="#handleBackButton" text="Back" BorderPane.alignment="CENTER">
                     <BorderPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
                     </BorderPane.margin>
                 </Button>
             </left>
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="AnswerText" onAction="#handleOK" prefHeight="25.0" prefWidth="625.0">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="OKButton" minWidth="28.0" mnemonicParsing="false" onAction="#handleOK" text="✓">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="ErrorLabel">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
         </BorderPane>
     </bottom>
     <center>
-      <VBox>
-         <children>
-            <TextField fx:id="AnswerText" prefHeight="20.0" prefWidth="200.0">
-               <VBox.margin>
-                  <Insets left="50.0" right="50.0" />
-               </VBox.margin>
-            </TextField>
-              <GridPane fx:id="GridAnswers" hgap="10.0" prefHeight="0.0" prefWidth="800.0" vgap="10.0">
-                  <padding>
-                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                  </padding>
-              </GridPane>
-         </children>
-      </VBox>
+        <GridPane fx:id="GridAnswers" hgap="10.0" prefHeight="422.0" prefWidth="800.0" vgap="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+        </GridPane>
     </center>
 </BorderPane>

@@ -25,7 +25,7 @@
    <bottom>
       <BorderPane maxHeight="70.0" maxWidth="800.0" minHeight="60.0" minWidth="800.0" prefHeight="60.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <left>
-            <Button mnemonicParsing="false" text="BackButton" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" text="Back" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </BorderPane.margin>
@@ -37,7 +37,7 @@
       <ScrollPane fx:id="QuestionScrollPane" BorderPane.alignment="CENTER">
          <GridPane fx:id="GridQuestion" hgap="10.0" vgap="10.0">
             <padding>
-               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
          </GridPane>
       </ScrollPane>
