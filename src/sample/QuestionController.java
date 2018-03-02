@@ -108,8 +108,8 @@ public class QuestionController {
         }
         else{
             ImageView imageView = new ImageView();
-            imageView.setFitHeight(300);
-            imageView.setFitWidth(300);
+            //imageView.setFitHeight(300);
+            //imageView.setFitWidth(300);
             try {
                 imageView.setImage(new Image(new FileInputStream(answers.getHint()[1])));
                 this.GridAnswers.add(imageView,0,1);
