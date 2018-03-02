@@ -1,4 +1,4 @@
-package sample;
+package code;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +19,7 @@ public class Controller {
     private int column=0;
     private int row=0;
 
-    private LoadQandA L= new LoadQandA();
+    private JsonTools L= new JsonTools();
 
     public void initialize() {
         updateQuestions();
@@ -61,7 +61,7 @@ public class Controller {
             addButton(QuestionButton,GridQuestion);
         }
     }
-    private void handleButtonAction(int number) throws Exception{
+    private void handleButtonAction(int number_q) throws Exception{
         Stage stage;
         Parent root;
         //get reference to the button's stage
@@ -72,8 +72,8 @@ public class Controller {
         FXMLLoader fxmlLoader=new FXMLLoader();
         root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
         QuestionController questionController= (QuestionController) fxmlLoader.getController();
-        LoadQandA L = new LoadQandA();
-        Question q = L.loadAnswers(number);
+        JsonTools L = new JsonTools();
+        Question q = L.loadAnswers(number_q);
         questionController.initialize(q);
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);

@@ -265,14 +265,14 @@
                     "Bobby", "bobby", "guard","Guard"
                 ],
                 "hint": {
-                    "nature": "Image",
+                    "nature": "Text",
                     "is": "B _ _ _ _ "
                 }
             }
         ]
     },
     "5": {
-        "theme": "Culture",       "validated": false,         "nature": "Text",
+        "theme": "CultureTODO",       "validated": false,         "nature": "Text",
         "question": "New York City",
         "answers": [
             {
@@ -288,17 +288,28 @@
             {
                 "number": 2,        "visibility": false,
                 "answer": [
-                    "Manhattan","manhattan","Big Apple","big apple","Queens","queens","Bronx","bronx","Staten Island", "staten island", "Brooklyn","brooklyn"
+                    "Manhattan","manhattan","Queens","queens","Bronx","bronx","Staten Island", "staten island", "Brooklyn","brooklyn"
                 ],
                 "hint": {
                     "nature": "Text",
                     "is": "District"
                 }
+            },
+            {
+                "number": 3,        "visibility": false,
+                "answer": [
+                    "Big Apple","big apple"
+                ],
+                "hint": {
+                    "nature": "Text",
+                    "is": "Nickname"
+                }
             }
+
         ]
     },
     "6": {
-        "theme": "History",       "validated": false,         "nature": "Text",
+        "theme": "HistoryTODO",       "validated": false,         "nature": "Text",
         "question": "King or Queen of England",
         "answers": [
             {
@@ -314,8 +325,8 @@
         ]
     },
     "7": {
-        "theme": "Vocabulary",       "validated": false,         "nature": "Text",
-        "question": "PHRASAL VERBS \n to come ____ ",
+        "theme": "VocabularyTODO",       "validated": false,         "nature": "Text",
+        "question": "Weather",
         "answers": [
             {
                 "number": 1,        "visibility": false,
@@ -330,8 +341,8 @@
         ]
     },
     "8": {
-        "theme": "Geography",       "validated": false,         "nature": "Text",
-        "question": "PHRASAL VERBS \n to come ____ ",
+        "theme": "GeographyTODO",       "validated": false,         "nature": "Text",
+        "question": "Big cities of United States of America",
         "answers": [
             {
                 "number": 1,        "visibility": false,
@@ -346,8 +357,8 @@
         ]
     },
     "9": {
-        "theme": "Culture",       "validated": false,         "nature": "Text",
-        "question": "PHRASAL VERBS \n to come ____ ",
+        "theme": "CultureTODO",       "validated": false,         "nature": "Text",
+        "question": "Famous Bands",
         "answers": [
             {
                 "number": 1,        "visibility": false,
@@ -362,8 +373,8 @@
         ]
     },
     "10": {
-        "theme": "History",       "validated": false,         "nature": "Text",
-        "question": "PHRASAL VERBS \n to come ____ ",
+        "theme": "HistoryTODO",       "validated": false,         "nature": "Image",
+        "question": "src/data/images/BostonTeaParty.png",
         "answers": [
             {
                 "number": 1,        "visibility": false,

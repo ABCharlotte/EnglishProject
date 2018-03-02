@@ -1,17 +1,17 @@
-package sample;
+package code;
 
-public class Answers {
+public class Answer {
     private int num_a;
     private boolean visibility;
     private String[] accepted;
     private String[] hint;
 
-    /*public void Answers(){
+    /*public void Answer(){
         accepted= new String[10];
         hint = new String[2];
     }*/
 
-    public Answers(int newNum_a, boolean newVisibility, String[] newAccepted, String[] newHint){
+    public Answer(int newNum_a, boolean newVisibility, String[] newAccepted, String[] newHint){
         num_a =newNum_a;
         visibility=newVisibility;
         accepted=newAccepted;
