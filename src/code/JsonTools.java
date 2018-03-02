@@ -5,8 +5,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class JsonTools {
@@ -57,7 +57,7 @@ public class JsonTools {
                 int num_a = (int) ((long)ans.get("number"));
                 boolean vis = ans.get("visibility").equals(true);
                 JSONArray ansArr = (JSONArray) ans.get("answer");
-                                String[] accepted = new String[ansArr.size()];
+                String[] accepted = new String[ansArr.size()];
                 for (int j = 0; j < ansArr.size(); j++) {
                     accepted[j]= (String) ansArr.get(j);
                 }
@@ -76,21 +76,63 @@ public class JsonTools {
         return question;
     }
 
-    public void validQuestion(Question question){}
-
-    public void validAnswer(Answer answer){
+    public void validQuestion(Question question){
 
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public void validAnswer(Question question, int num_a){
+
+
+
+
+    }
+
+    public static void main(String[] args) throws IOException, ParseException {
 
         System.out.println("panda !");
 
-        JsonTools L = new JsonTools();
-        Question[] q= L.loadQuestions();
-        System.out.println(q[0].getTheme());
-        Question qAndA = L.loadAnswers(0);
-        System.out.println(qAndA.getAnswers()[1].getAccepted()[0]);
+        //JsonTools L = new JsonTools();
+        //Question[] q= L.loadQuestions();
+        //System.out.println(q[0].getTheme());
+        //Question qAndA = L.loadAnswers(2);
+        //System.out.println(qAndA.getAnswers()[2].getAccepted()[0]);
+        //System.out.println(qAndA.getAnswers()[2].isVisibility());
+        //L.validAnswer(qAndA,2);
+        //qAndA = L.loadAnswers(2);
+        //System.out.println(qAndA.getAnswers()[2].isVisibility());
+
+        /*FileReader reader = new FileReader(filePath);
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonQuest = (JSONObject) jsonParser.parse(reader);
+        JSONObject quest = (JSONObject) jsonQuest.get(""+2+"");
+        JSONArray answers = (JSONArray) quest.get("answers");
+        JSONObject a = (JSONObject) answers.get(2);
+        System.out.println(a.get("visibility"));
+        a.put("visibility", new Boolean(true));
+        System.out.println(a.get("visibility"));*/
+        FileReader reader = new FileReader(filePath);
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
+        JSONObject quest = (JSONObject) jsonFile.get(""+2+"");
+        JSONArray answers = (JSONArray) quest.get("answers");
+        JSONObject a = (JSONObject) answers.get(2);
+        System.out.println(a.get("visibility"));
+        a.remove("visibility");
+        //a.put("visibility", new Boolean(true));
+        System.out.println(a.get("visibility"));
+        //answers.set(2,a);
+        //quest.put("answers",answers);
+        //jsonFile.put("2",quest);
+        //reader.close();
+        System.out.println(jsonFile);
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(jsonFile.toJSONString());
+            writer.flush();
+            System.out.println("Successfully Copied JSON Object to File...");
+            System.out.println("\nJSON Object: " + jsonFile);
+        }
+
+
     }
 }
 
