@@ -28,7 +28,7 @@ public class Controller {
     private void addButton(Button button, GridPane grid) {
         button.setMinSize(100,100);
         grid.add(button, column, row);
-        int div = (int) (this.QuestionScrollPane.getWidth()/120);
+        int div = (int) (grid.getWidth()/120);
         //System.out.println(this.mainPane.getWidth());
         if (div==0){
             div=6;
