@@ -9,8 +9,11 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Controller {
 
+    public Button backButton;
     @FXML
     private ScrollPane QuestionScrollPane;
     @FXML
@@ -71,10 +74,27 @@ public class Controller {
         //load up OTHER FXML document
         FXMLLoader fxmlLoader=new FXMLLoader();
         root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
-        QuestionController questionController= (QuestionController) fxmlLoader.getController();
+        QuestionController questionController= fxmlLoader.getController();
         JsonTools L = new JsonTools();
         Question q = L.loadAnswers(number_q);
         questionController.initialize(q);
+        //create a new scene with root and set the stage
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setHeight(height);
+        stage.setWidth(width);
+        stage.show();
+    }
+
+    public void handleBackButton() throws IOException {
+        Stage stage;
+        Parent root;
+        //get reference to the button's stage
+        stage=(Stage) GridQuestion.getScene().getWindow();
+        double height=stage.getHeight();
+        double width=stage.getWidth();
+        //load up OTHER FXML document
+        root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
