@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.AddQuestionController">
+    <BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0">
+        <left>
+          <VBox fx:id="leftVbox" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+        </left>
+        <right>
+          <VBox fx:id="rightVbox" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+        </right>
+        <top>
+            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                <Label text="Add a question">
+                    <font>
+                        <Font size="30.0"/>
+                    </font>
+                </Label>
+                <TextField text="Write your question here"/>
+            </VBox>
+        </top>
+        <padding>
+          <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+        </padding>
+    </BorderPane>
+</AnchorPane>
