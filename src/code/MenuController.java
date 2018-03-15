@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -15,10 +16,12 @@ public class MenuController {
     public Button playButton;
     public BorderPane borderPane;
     public Button resetButton;
+    public Label nameLabel;
+    public Button loadButton;
 
     void initialize(){
     }
-    private void switchFXML(String name) throws IOException {
+    void switchFXML(String name) throws IOException {
         Stage stage;
         Parent root;
         //get reference to the button's stage
@@ -40,8 +43,9 @@ public class MenuController {
     public void handlePlayButton() throws IOException {
         switchFXML("main.fxml");
     }
-    public void handleLoadButton(){
-
+    public void handleLoadButton() throws IOException {
+        this.switchFXML("Load.fxml");
+        this.nameLabel.setText("Save loaded");
     }
     public void handleResetButton() throws IOException {
         switchFXML("confirmation.fxml");
