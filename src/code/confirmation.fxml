@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
- <BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.ConfirmationController">
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.ConfirmationController">
      <top>
          <VBox BorderPane.alignment="CENTER">
              <padding>
@@ -29,10 +28,10 @@
      <padding>
        <Insets bottom="20.0" left="100.0" right="100.0" top="20.0" />
      </padding>
-     <left>
-       <Button fx:id="yesButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleYesButton" prefHeight="40.0" prefWidth="200.0" text="Yes" BorderPane.alignment="CENTER" />
-     </left>
-     <right>
+   <left>
        <Button fx:id="noButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="40.0" prefWidth="200.0" text="No, please stop!" BorderPane.alignment="CENTER" />
-     </right>
+   </left>
+   <right>
+       <Button fx:id="yesButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleYesButton" prefHeight="40.0" prefWidth="200.0" text="Yes" BorderPane.alignment="CENTER" />
+   </right>
  </BorderPane>
