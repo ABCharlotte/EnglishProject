@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class MenuController {
@@ -41,14 +40,14 @@ public class MenuController {
 
     @FXML
     public void handlePlayButton() throws IOException {
-        switchFXML("main.fxml");
+        switchFXML("fxml/main.fxml");
     }
     public void handleLoadButton() throws IOException {
-        this.switchFXML("Load.fxml");
+        this.switchFXML("fxml/Load.fxml");
         this.nameLabel.setText("Save loaded");
     }
     public void handleResetButton() throws IOException {
-        switchFXML("confirmation.fxml");
+        switchFXML("fxml/confirmation.fxml");
     }
 
 }

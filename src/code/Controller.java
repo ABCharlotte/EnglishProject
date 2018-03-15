@@ -73,7 +73,7 @@ public class Controller {
         double width=stage.getWidth();
         //load up OTHER FXML document
         FXMLLoader fxmlLoader=new FXMLLoader();
-        root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
+        root = fxmlLoader.load(getClass().getResource("fxml/Question.fxml").openStream());
         QuestionController questionController= fxmlLoader.getController();
         JsonTools L = new JsonTools();
         Question q = L.loadAnswers(number_q);
@@ -94,7 +94,7 @@ public class Controller {
         double height=stage.getHeight();
         double width=stage.getWidth();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+        root = FXMLLoader.load(getClass().getResource("fxml/Menu.fxml"));
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);

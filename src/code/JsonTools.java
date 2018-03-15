@@ -8,9 +8,12 @@ import org.json.simple.parser.ParseException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 
 public class JsonTools {
-    private static final String filePath = "src/data/questions.json";
+    private static String filePath = "src/data/everybody.json";
     //private static int nbOfQuest=3;
 
     public  static Question[] loadQuestions(){
@@ -97,31 +100,11 @@ public class JsonTools {
         JSONArray answers = (JSONArray) quest.get("answers");
         JSONObject a = (JSONObject) answers.get(num_a-1);
         a.put("visibility", new Boolean(true));
-        //System.out.println(a.get("visibility"));
-        /*answers.set(2,a);
-        quest.put("answers",answers);
-        jsonFile.put("2",quest);
-        */
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write(jsonFile.toJSONString());
             writer.flush();
-            //System.out.println("Successfully Copied JSON Object to File...");
-            //System.out.println("\nJSON Object: " + jsonFile);
-        }/*
-        try (FileWriter writer = new FileWriter(filePath)) {
-            JSONWriter jsonWriter = new JSONWriter(writer);
-            jsonWriter.object("2");
-            jsonWriter.object();
-            jsonWriter.key("2");
-            jsonWriter.value(a);
-            jsonWriter.endObject();
-            writer.flush();
-            System.out.println("Successfully Copied JSON Object to File...");
-            System.out.println("\nJSON Object: ");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
+        }
 
 //verification if Question must be validated
         boolean toValid=true;
@@ -136,21 +119,64 @@ public class JsonTools {
         }
     }
 
+    public void load_player(String player) throws IOException, ParseException {
+        filePath = "src/data/"+player+".json";
+        if (Files.exists(Paths.get(filePath))){
+            System.out.println("The file linked to the player " + player + " is loaded.");
+        }else{
+            json_create(player);
+        }
+    }
+
+    public void json_create(String player) throws IOException, ParseException {
+        filePath = "src/data/"+player+".json";
+        FileReader reader = new FileReader("src/data/sauvDB.json");
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
+        reader.close();
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(jsonFile.toJSONString());
+            writer.flush();
+            System.out.println("The file linked to the player " + player + " is created. ");
+        }
+
+    }
+
+    public void json_erase(String player) throws IOException, ParseException {
+        if (player.equals("everybody")){
+            this.json_create("everybody");
+            System.out.println("The default file is reinitialised.");
+        }else {
+            filePath = "src/data/" + player + ".json";
+            Files.delete(Paths.get(filePath));
+            System.out.println("The file linked to the player " + player + " is deleted. ");
+        }
+        load_player("everybody");
+
+    }
+
     public static void main(String[] args) throws IOException, ParseException {
 
-        System.out.println("panda !");
+        //System.out.println("panda !");
 
         JsonTools L = new JsonTools();
         Question[] q= L.loadQuestions();
         //System.out.println(q[0].getTheme());
         Question qAndA = L.loadAnswers(7);
-        System.out.println(qAndA.getAnswers()[0].getAccepted()[1]);
+        //System.out.println(qAndA.getAnswers()[0].getAccepted()[1]);
         //System.out.println(qAndA.getAnswers()[2].getAccepted()[0]);
         //System.out.println(qAndA.getAnswers()[2].isVisibility());
         //L.validAnswer(qAndA,1);
         //System.out.println(qAndA.getAnswers()[2].isVisibility());
         System.out.println(qAndA.checkAnswers("back"));
+        L.json_create("chat");
+        L.load_player("panda");
+        //System.out.println(L.getPlayer());
 
+    }
+
+    public String getPlayer() {
+        return filePath.substring(9,filePath.length()-5);
     }
 }
 
