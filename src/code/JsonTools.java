@@ -121,10 +121,10 @@ public class JsonTools {
 
     public void load_player(String player) throws IOException, ParseException {
         filePath = "src/data/"+player+".json";
-        Question[] Q;
-        try {
-            Q = this.loadQuestions();
-        }catch(Exception e){
+        if (Files.exists(Paths.get(filePath))){
+            System.out.println("The file linked to the player" + player + "is loaded");
+        }else{
+            System.out.println("I'm here");
             json_create(player);
         }
     }
@@ -170,7 +170,13 @@ public class JsonTools {
         //System.out.println(qAndA.getAnswers()[2].isVisibility());
         System.out.println(qAndA.checkAnswers("back"));
         L.json_create("chat");
+        L.load_player("panda");
+        System.out.println(L.getPlayer());
 
+    }
+
+    public String getPlayer() {
+        return filePath.substring(9,filePath.length()-5);
     }
 }
 

@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 
@@ -33,7 +34,9 @@ public class ConfirmationController {
 
     }
 
-    public void handleYesButton(ActionEvent actionEvent) throws IOException {
+    public void handleYesButton(ActionEvent actionEvent) throws IOException, ParseException {
+        JsonTools J = new JsonTools();
+        J.json_erase(J.getPlayer());
         switchFXML("Menu.fxml");
     }
 
