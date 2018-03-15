@@ -37,10 +37,10 @@ public class ConfirmationController {
     public void handleYesButton(ActionEvent actionEvent) throws IOException, ParseException {
         JsonTools J = new JsonTools();
         J.json_erase(J.getPlayer());
-        switchFXML("Menu.fxml");
+        switchFXML("fxml/Menu.fxml");
     }
 
     public void handleNoButton(ActionEvent actionEvent) throws IOException {
-        switchFXML("Menu.fxml");
+        switchFXML("fxml/Menu.fxml");
     }
 }

@@ -18,10 +18,10 @@ public class LoadController extends MenuController{
         super.initialize();
     }
     public void handleCancel() throws IOException {
-        this.switchFXML("Menu.fxml");
+        this.switchFXML("fxml/Menu.fxml");
     }
     public void handleOK() throws IOException, ParseException {
-        System.out.println(this.textField.getText());
+        //System.out.println(this.textField.getText());
         JsonTools J = new JsonTools();
         J.load_player(this.textField.getText());
         this.handleCancel();

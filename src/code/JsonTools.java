@@ -122,9 +122,8 @@ public class JsonTools {
     public void load_player(String player) throws IOException, ParseException {
         filePath = "src/data/"+player+".json";
         if (Files.exists(Paths.get(filePath))){
-            System.out.println("The file linked to the player" + player + "is loaded");
+            System.out.println("The file linked to the player " + player + " is loaded.");
         }else{
-            System.out.println("I'm here");
             json_create(player);
         }
     }
@@ -138,7 +137,7 @@ public class JsonTools {
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write(jsonFile.toJSONString());
             writer.flush();
-            System.out.println("the file linked to the player " + player + " is created. ");
+            System.out.println("The file linked to the player " + player + " is created. ");
         }
 
     }
@@ -146,10 +145,11 @@ public class JsonTools {
     public void json_erase(String player) throws IOException, ParseException {
         if (player.equals("everybody")){
             this.json_create("everybody");
-            System.out.println("the default file is reinitialised.");
+            System.out.println("The default file is reinitialised.");
         }else {
             filePath = "src/data/" + player + ".json";
             Files.delete(Paths.get(filePath));
+            System.out.println("The file linked to the player " + player + " is deleted. ");
         }
         load_player("everybody");
 
@@ -157,7 +157,7 @@ public class JsonTools {
 
     public static void main(String[] args) throws IOException, ParseException {
 
-        System.out.println("panda !");
+        //System.out.println("panda !");
 
         JsonTools L = new JsonTools();
         Question[] q= L.loadQuestions();
@@ -171,7 +171,7 @@ public class JsonTools {
         System.out.println(qAndA.checkAnswers("back"));
         L.json_create("chat");
         L.load_player("panda");
-        System.out.println(L.getPlayer());
+        //System.out.println(L.getPlayer());
 
     }
 
