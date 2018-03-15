@@ -73,7 +73,7 @@ public class Controller {
         double width=stage.getWidth();
         //load up OTHER FXML document
         FXMLLoader fxmlLoader=new FXMLLoader();
-        root = fxmlLoader.load(getClass().getResource("Question.fxml").openStream());
+        root = fxmlLoader.load(getClass().getResource("fxml/Question.fxml").openStream());
         QuestionController questionController= fxmlLoader.getController();
         JsonTools L = new JsonTools();
         Question q = L.loadAnswers(number_q);
