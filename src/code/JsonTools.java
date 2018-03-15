@@ -71,6 +71,7 @@ public class JsonTools {
                 answers[i]= new Answer(num_a,vis,accepted,hint);
             }
             question = new Question(num_q,theme,val,nature,text,answers);
+            reader.close();
         } catch (ParseException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -89,6 +90,7 @@ public class JsonTools {
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write(jsonFile.toJSONString());
             writer.flush();
+            writer.close();
         }
     }
 
@@ -104,6 +106,7 @@ public class JsonTools {
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write(jsonFile.toJSONString());
             writer.flush();
+            writer.close();
         }
 
 //verification if Question must be validated
@@ -137,6 +140,7 @@ public class JsonTools {
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write(jsonFile.toJSONString());
             writer.flush();
+            writer.close();
             System.out.println("The file linked to the player " + player + " is created. ");
         }
 
