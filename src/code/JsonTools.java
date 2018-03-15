@@ -8,6 +8,8 @@ import org.json.simple.parser.ParseException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 public class JsonTools {
@@ -136,7 +138,20 @@ public class JsonTools {
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write(jsonFile.toJSONString());
             writer.flush();
+            System.out.println("the file linked to the player " + player + " is created. ");
         }
+
+    }
+
+    public void json_erase(String player) throws IOException, ParseException {
+        if (player.equals("everybody")){
+            this.json_create("everybody");
+            System.out.println("the default file is reinitialised.");
+        }else {
+            filePath = "src/data/" + player + ".json";
+            Files.delete(Paths.get(filePath));
+        }
+        load_player("everybody");
 
     }
 
