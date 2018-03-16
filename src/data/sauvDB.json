@@ -148,6 +148,16 @@
                     "nature": "Image",
                     "is": "src/data/images/flags/sa.png"
                 }
+            },
+            {
+                "number": 11,        "visibility": false,
+                "answer": [
+                    "Wales"
+                ],
+                "hint": {
+                    "nature": "Image",
+                    "is": "src/data/images/flags/wales.png"
+                }
             }
 
         ]
