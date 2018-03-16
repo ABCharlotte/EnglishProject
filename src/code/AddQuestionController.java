@@ -7,31 +7,48 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
+import java.io.IOException;
+
 public class AddQuestionController extends MenuController {
     public BorderPane borderPane;
     public VBox leftVbox;
     public VBox rightVbox;
-    public TextField questionTextField;
     public Button cancelButton;
     public Button okButton;
-    private int questionNumber=1;
-    //public Button plusButton= new Button("+").setOnAction(event -> addQuestion());
+    public Button plusButton;
+    public TextField questionTextField;
+    private int questionNumber=0;
 
     @Override
-    void initialize() {
-        //this.leftVbox.getChildren().add(0,this.plusButton);
+    public void initialize() {
+        this.addQuestion();
     }
 
     @FXML
-    private void handleOK(){
-
+    private void handleOK() throws IOException {
+        this.getQandA();
+        super.switchFXML("fxml/main.fxml");
     }
     @FXML
-    private void handleCancel(){
-
+    private void handleCancel() throws IOException {
+        super.switchFXML("fxml/main.fxml");
     }
-    private void addQuestion(){
-        this.leftVbox.getChildren().remove(0);
-        this.leftVbox.getChildren().addAll(new Label("Question "+this.questionNumber),new TextField());
+    public void addQuestion(){
+        this.leftVbox.getChildren().remove(questionNumber*2);
+        this.questionNumber++;
+        this.leftVbox.getChildren().addAll(new Label("Question "+this.questionNumber),new TextField(),this.plusButton);
+        this.rightVbox.getChildren().addAll(new Label("Hint "+this.questionNumber),new TextField());
+    }
+
+    private String[] getQandA(){
+        String[] result= new String[questionNumber*2+1];
+        result[0]=this.questionTextField.getText();
+        for (int i=1;i<=questionNumber;i++){
+            TextField temp=(TextField) this.leftVbox.getChildren().get(i*2-1);
+            result[i]=temp.getText();
+            temp=(TextField) this.rightVbox.getChildren().get(i*2-1);
+            result[i+questionNumber]=temp.getText();
+        }
+        return result;
     }
 }

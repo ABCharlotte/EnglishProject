@@ -6,21 +6,24 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
+public class Controller extends MenuController {
 
     public Button backButton;
+    public Button addButton;
     @FXML
     private ScrollPane QuestionScrollPane;
     @FXML
     private GridPane GridQuestion;
-
     private int column=0;
     private int row=0;
+    @FXML
+    private BorderPane borderPane;
 
     private JsonTools L= new JsonTools();
 
@@ -87,19 +90,9 @@ public class Controller {
     }
 
     public void handleBackButton() throws IOException {
-        Stage stage;
-        Parent root;
-        //get reference to the button's stage
-        stage=(Stage) GridQuestion.getScene().getWindow();
-        double height=stage.getHeight();
-        double width=stage.getWidth();
-        //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getResource("fxml/Menu.fxml"));
-        //create a new scene with root and set the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.show();
+        super.switchFXML("fxml/Menu.fxml");
+    }
+    public void handleAddButton() throws IOException {
+        super.switchFXML("fxml/addQuestion.fxml");
     }
 }
