@@ -16,7 +16,10 @@
                 <padding>
                     <Insets top="5.0" />
                 </padding>
-                <Button fx:id="plusButton" mnemonicParsing="false" onAction="#addQuestion" prefWidth="100.0" text="+" />
+                <Button fx:id="plusButton" mnemonicParsing="false" onAction="#addQuestion" prefWidth="100.0" text="+">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></Button>
             </VBox>
         </left>
         <right>
