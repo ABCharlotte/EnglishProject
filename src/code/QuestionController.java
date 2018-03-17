@@ -74,9 +74,9 @@ public class QuestionController {
             activeQuestion=j.loadAnswers(activeQuestion.getNum_q());
             for (int i=0;i<this.activeQuestion.getAnswers().length;i++){
                 Answer answer =this.activeQuestion.getAnswers()[i];
-                Button AnswerButton = new Button(""+answer.getNum_a());
+                Button AnswerButton = new Button("      "+answer.getNum_a()+ "\n click for hint");
                 if(answer.isVisibility()){
-                    AnswerButton.setStyle("-fx-background-color: #00ff00");
+                    AnswerButton.setStyle("-fx-background-color: #68e0ee");
                     AnswerButton.setText(answer.getAccepted()[0]);
                 }
                 int temp = i;

@@ -53,7 +53,7 @@ public class Controller extends MenuController {
         for (int i=1;i<q.length;i++){
             Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
             if(q[i].isValidated()){
-                QuestionButton.setStyle("-fx-background-color: #00ff00");
+                QuestionButton.setStyle("-fx-background-color: #68e0ee");
             }
             int temp = i;
             QuestionButton.setOnAction(event -> {
