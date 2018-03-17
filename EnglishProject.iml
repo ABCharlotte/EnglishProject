@@ -146,5 +146,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="java-json.jar" level="project" />
+    <orderEntry type="library" name="gson-2.8.2" level="project" />
   </component>
 </module>

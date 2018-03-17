@@ -51,7 +51,7 @@ public class Controller extends MenuController {
         this.column=0;
         this.GridQuestion.getChildren().clear();
         Question[] q = L.loadQuestions();
-        for (int i=0;i<q.length;i++){
+        for (int i=1;i<q.length;i++){
             Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
             if(q[i].isValidated()){
                 QuestionButton.setStyle("-fx-background-color: #00ff00");

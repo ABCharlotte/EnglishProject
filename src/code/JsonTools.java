@@ -1,5 +1,11 @@
 package code;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
+import org.json.JSONString;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -138,7 +144,7 @@ public class JsonTools {
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(jsonFile.toJSONString());
+            writer.write(prettyprint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
             System.out.println("The file linked to the player " + player + " is created. ");
@@ -157,6 +163,13 @@ public class JsonTools {
         }
         load_player("everybody");
 
+    }
+    public String prettyprint(String uglyJSONString){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(uglyJSONString);
+        String prettyJsonString = gson.toJson(je);
+        return prettyJsonString;
     }
 
     public static void main(String[] args) throws IOException, ParseException {
