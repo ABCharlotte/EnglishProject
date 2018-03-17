@@ -110,7 +110,7 @@ public class JsonTools {
         a.put("visibility", new Boolean(true));
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(jsonFile.toJSONString());
+            writer.write(prettyprint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
         }
