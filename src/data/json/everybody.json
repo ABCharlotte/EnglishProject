@@ -75,7 +75,7 @@
       },
       {
         "number": 2,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "United States of America",
           "USA",
@@ -266,7 +266,7 @@
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Ravens",
           "crow",
@@ -477,35 +477,5 @@
       }
     ],
     "theme": "HistoryTODO"
-  },
-  "11": {
-    "validated": false,
-    "question": "Write your question here",
-    "nature": "Text",
-    "answers": [
-      {
-        "number": 1,
-        "visibility": false,
-        "answer": [
-          "q1"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "h1"
-        }
-      },
-      {
-        "number": 2,
-        "visibility": false,
-        "answer": [
-          "q2"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "h2"
-        }
-      }
-    ],
-    "theme": "Write your theme here"
   }
 }

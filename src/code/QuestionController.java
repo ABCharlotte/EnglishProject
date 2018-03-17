@@ -101,7 +101,7 @@ public class QuestionController {
         double width=stage.getWidth();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
-        //create a new scene with root and set the stage
+        //create a new scene with root and setNum the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setHeight(height);

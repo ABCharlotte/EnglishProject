@@ -25,8 +25,6 @@ public class Controller extends MenuController {
     @FXML
     private BorderPane borderPane;
 
-    private JsonTools L= new JsonTools();
-
     public void initialize() {
         updateQuestions();
     }
@@ -50,7 +48,8 @@ public class Controller extends MenuController {
         this.row=0;
         this.column=0;
         this.GridQuestion.getChildren().clear();
-        Question[] q = L.loadQuestions();
+        JsonTools J = new JsonTools();
+        Question[] q = J.loadQuestions();
         for (int i=1;i<q.length;i++){
             Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
             if(q[i].isValidated()){
@@ -81,7 +80,7 @@ public class Controller extends MenuController {
         JsonTools L = new JsonTools();
         Question q = L.loadAnswers(number_q);
         questionController.initialize(q);
-        //create a new scene with root and set the stage
+        //create a new scene with root and setNum the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setHeight(height);

@@ -1,6 +1,8 @@
 {
     "0": {
-        "theme": "Culture",         "validated": false,          "nature": "Image",
+        "theme": "Culture",
+        "validated": false,
+        "nature": "Image",
         "question": "src/data/images/test.png",
         "answers": [
             {

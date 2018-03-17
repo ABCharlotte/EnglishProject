@@ -1,12 +1,12 @@
 {
   "0": {
+    "theme": "Culture",
     "validated": false,
-    "question": "src/data/images/test.png",
     "nature": "Image",
+    "question": "src/data/images/test.png",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "Test"
         ],
@@ -16,11 +16,9 @@
         }
       },
       {
-        "number": 2,
-        "visibility": true,
+        "number": 2,        "visibility": true,
         "answer": [
-          "Panda",
-          "panda"
+          "Panda", "panda"
         ],
         "hint": {
           "nature": "Text",
@@ -28,11 +26,9 @@
         }
       },
       {
-        "number": 3,
-        "visibility": false,
+        "number": 3,        "visibility": false,
         "answer": [
-          "Child",
-          "children"
+          "Child", "children"
         ],
         "hint": {
           "nature": "Text",
@@ -40,31 +36,23 @@
         }
       },
       {
-        "number": 4,
-        "visibility": false,
+        "number": 4,        "visibility": false,
         "answer": [
-          "Cuddly Toy",
-          "teddy",
-          "teddy bear",
-          "soft toy",
-          "toy"
+          "Cuddly Toy","teddy", "teddy bear","soft toy","toy"
         ],
         "hint": {
           "nature": "Text",
           "is": "C _ _ _ _ _      T _ _ "
         }
       }
-    ],
-    "theme": "Culture"
+    ]
   },
   "1": {
-    "validated": false,
+    "theme": "Geography",       "validated": false,         "nature": "Text",
     "question": "English Speaking Countries",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "England"
         ],
@@ -74,15 +62,9 @@
         }
       },
       {
-        "number": 2,
-        "visibility": false,
+        "number": 2,        "visibility": false,
         "answer": [
-          "United States of America",
-          "USA",
-          "u.s.a.",
-          "United States",
-          "US",
-          "U.S."
+          "United States of America", "USA", "u.s.a.", "United States", "US", "U.S."
         ],
         "hint": {
           "nature": "Image",
@@ -90,8 +72,7 @@
         }
       },
       {
-        "number": 3,
-        "visibility": false,
+        "number": 3,        "visibility": false,
         "answer": [
           "Australia"
         ],
@@ -101,12 +82,9 @@
         }
       },
       {
-        "number": 4,
-        "visibility": false,
+        "number": 4,        "visibility": false,
         "answer": [
-          "United Kingdom",
-          "UK",
-          "U.K."
+          "United Kingdom","UK","U.K."
         ],
         "hint": {
           "nature": "Image",
@@ -114,12 +92,9 @@
         }
       },
       {
-        "number": 5,
-        "visibility": false,
+        "number": 5,        "visibility": false,
         "answer": [
-          "Ireland",
-          "north ireland",
-          "south ireland"
+          "Ireland", "north ireland","south ireland"
         ],
         "hint": {
           "nature": "Image",
@@ -127,8 +102,7 @@
         }
       },
       {
-        "number": 6,
-        "visibility": false,
+        "number": 6,        "visibility": false,
         "answer": [
           "Scotland"
         ],
@@ -138,8 +112,7 @@
         }
       },
       {
-        "number": 7,
-        "visibility": false,
+        "number": 7,        "visibility": false,
         "answer": [
           "India"
         ],
@@ -149,8 +122,7 @@
         }
       },
       {
-        "number": 8,
-        "visibility": false,
+        "number": 8,        "visibility": false,
         "answer": [
           "Canada"
         ],
@@ -160,11 +132,9 @@
         }
       },
       {
-        "number": 9,
-        "visibility": false,
+        "number": 9,        "visibility": false,
         "answer": [
-          "New Zealand",
-          "Zealand"
+          "New Zealand","Zealand"
         ],
         "hint": {
           "nature": "Image",
@@ -172,8 +142,7 @@
         }
       },
       {
-        "number": 10,
-        "visibility": false,
+        "number": 10,        "visibility": false,
         "answer": [
           "South Africa"
         ],
@@ -183,8 +152,7 @@
         }
       },
       {
-        "number": 11,
-        "visibility": false,
+        "number": 11,        "visibility": false,
         "answer": [
           "Wales"
         ],
@@ -193,17 +161,15 @@
           "is": "src/data/images/flags/wales.png"
         }
       }
-    ],
-    "theme": "Geography"
+
+    ]
   },
   "2": {
-    "validated": false,
+    "theme": "Grammar",       "validated": false,         "nature": "Text",
     "question": "PHRASAL VERBS \n to come ____ ",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "Back"
         ],
@@ -213,8 +179,7 @@
         }
       },
       {
-        "number": 2,
-        "visibility": false,
+        "number": 2,        "visibility": false,
         "answer": [
           "In"
         ],
@@ -224,8 +189,7 @@
         }
       },
       {
-        "number": 3,
-        "visibility": false,
+        "number": 3,        "visibility": false,
         "answer": [
           "Out"
         ],
@@ -235,8 +199,7 @@
         }
       },
       {
-        "number": 4,
-        "visibility": false,
+        "number": 4,        "visibility": false,
         "answer": [
           "Over"
         ],
@@ -246,8 +209,7 @@
         }
       },
       {
-        "number": 5,
-        "visibility": false,
+        "number": 5,        "visibility": false,
         "answer": [
           "Up With"
         ],
@@ -256,23 +218,17 @@
           "is": "Find, invent"
         }
       }
-    ],
-    "theme": "Grammar"
+
+    ]
   },
   "3": {
-    "validated": false,
+    "theme": "History",       "validated": false,          "nature": "Image",
     "question": "src/data/images/raven_london.png",
-    "nature": "Image",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
-          "Ravens",
-          "crow",
-          "Raven",
-          "crows",
-          "Ravens of the Tower of London"
+          "Ravens", "crow", "Raven", "crows", "Ravens of the Tower of London"
         ],
         "hint": {
           "nature": "Text",
@@ -280,11 +236,9 @@
         }
       },
       {
-        "number": 2,
-        "visibility": false,
+        "number": 2,        "visibility": false,
         "answer": [
-          "Tower of London",
-          "London"
+          "Tower of London", "London"
         ],
         "hint": {
           "nature": "Text",
@@ -292,12 +246,9 @@
         }
       },
       {
-        "number": 3,
-        "visibility": false,
+        "number": 3,        "visibility": false,
         "answer": [
-          "Crown",
-          "Queen",
-          "Crown of England"
+          "Crown", "Queen", "Crown of England"
         ],
         "hint": {
           "nature": "Text",
@@ -305,13 +256,9 @@
         }
       },
       {
-        "number": 4,
-        "visibility": false,
+        "number": 4,        "visibility": false,
         "answer": [
-          "England",
-          "United Kingdom",
-          "uk",
-          "U.K."
+          "England", "United Kingdom", "uk","U.K."
         ],
         "hint": {
           "nature": "Image",
@@ -319,35 +266,25 @@
         }
       },
       {
-        "number": 4,
-        "visibility": false,
+        "number": 4,        "visibility": false,
         "answer": [
-          "Bobby",
-          "Guard"
+          "Bobby", "Guard"
         ],
         "hint": {
           "nature": "Text",
           "is": "B _ _ _ _ "
         }
       }
-    ],
-    "theme": "History"
+    ]
   },
   "4": {
-    "validated": false,
+    "theme": "CultureTODO",       "validated": false,         "nature": "Text",
     "question": "New York City",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
-          "United States of America",
-          "USA",
-          "U.S.A.",
-          "United States",
-          "US",
-          "U.S."
+          "United States of America", "USA", "U.S.A.", "United States", "US", "U.S."
         ],
         "hint": {
           "nature": "Image",
@@ -355,14 +292,9 @@
         }
       },
       {
-        "number": 2,
-        "visibility": false,
+        "number": 2,        "visibility": false,
         "answer": [
-          "Manhattan",
-          "Queens",
-          "Bronx",
-          "Staten Island",
-          "Brooklyn"
+          "Manhattan","Queens","Bronx","Staten Island", "Brooklyn"
         ],
         "hint": {
           "nature": "Text",
@@ -370,8 +302,7 @@
         }
       },
       {
-        "number": 3,
-        "visibility": false,
+        "number": 3,        "visibility": false,
         "answer": [
           "Big Apple"
         ],
@@ -380,17 +311,15 @@
           "is": "Nickname"
         }
       }
-    ],
-    "theme": "CultureTODO"
+
+    ]
   },
   "5": {
-    "validated": false,
+    "theme": "HistoryTODO",       "validated": false,         "nature": "Text",
     "question": "King or Queen of England",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "1"
         ],
@@ -399,17 +328,14 @@
           "is": "1"
         }
       }
-    ],
-    "theme": "HistoryTODO"
+    ]
   },
   "6": {
-    "validated": false,
+    "theme": "VocabularyTODO",       "validated": false,         "nature": "Text",
     "question": "Weather",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "1"
         ],
@@ -418,17 +344,14 @@
           "is": "1"
         }
       }
-    ],
-    "theme": "VocabularyTODO"
+    ]
   },
   "7": {
-    "validated": false,
+    "theme": "GeographyTODO",       "validated": false,         "nature": "Text",
     "question": "Big cities of United States of America",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "1"
         ],
@@ -437,17 +360,14 @@
           "is": "1"
         }
       }
-    ],
-    "theme": "GeographyTODO"
+    ]
   },
   "8": {
-    "validated": false,
+    "theme": "CultureTODO",       "validated": false,         "nature": "Text",
     "question": "Famous Bands",
-    "nature": "Text",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "1"
         ],
@@ -456,17 +376,14 @@
           "is": "1"
         }
       }
-    ],
-    "theme": "CultureTODO"
+    ]
   },
   "9": {
-    "validated": false,
+    "theme": "HistoryTODO",       "validated": false,         "nature": "Image",
     "question": "src/data/images/BostonTeaParty.png",
-    "nature": "Image",
     "answers": [
       {
-        "number": 1,
-        "visibility": false,
+        "number": 1,        "visibility": false,
         "answer": [
           "1"
         ],
@@ -475,37 +392,6 @@
           "is": "1"
         }
       }
-    ],
-    "theme": "HistoryTODO"
-  },
-  "11": {
-    "validated": false,
-    "question": "Write your question here",
-    "nature": "Text",
-    "answers": [
-      {
-        "number": 1,
-        "visibility": false,
-        "answer": [
-          "q1"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "h1"
-        }
-      },
-      {
-        "number": 2,
-        "visibility": false,
-        "answer": [
-          "q2"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "h2"
-        }
-      }
-    ],
-    "theme": "Write your theme here"
+    ]
   }
 }
