@@ -63,4 +63,8 @@ public class Question {
         }
         return false;
     }
+
+    public void set(int num_q) {
+        this.num_q = num_q;
+    }
 }

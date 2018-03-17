@@ -163,9 +163,48 @@ public class JsonTools {
         return filePath.substring(9,filePath.length()-5);
     }
 
-    public void addQuestion(){
+    public void addQuestion(Question q) throws IOException, ParseException {
+        FileReader reader = new FileReader("src/data/sauvDB.json");
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
+        int num_q = jsonFile.size()+1;
+        q.set(num_q);
+        JSONObject quest = new JSONObject();
+        quest.put("theme", q.getTheme());
+        quest.put("validated", q.isValidated());
+        quest.put("nature", q.getNature());
+        quest.put("question", q.getQuestion());
+        JSONArray ansArray = new JSONArray();
+        for (int i=0; i< q.getAnswers().length; i++){
+            JSONObject ans = new JSONObject();
+            ans.put("number",q.getAnswers()[i].getNum_a());
+            ans.put("visibility",q.getAnswers()[i].isVisibility());
+        }
+        quest.put("answers",ansArray);
+        jsonFile.put(num_q, quest);
+        reader.close();
 
+        try (FileWriter writer = new FileWriter("src/data/test.json")) {
+            writer.flush();
+            writer.close();
+        }
+
+            boolean vis = ans.get("visibility").equals(true);
+            JSONArray ansArr = (JSONArray) ans.get("answer");
+            String[] accepted = new String[ansArr.size()];
+            for (int j = 0; j < ansArr.size(); j++) {
+                accepted[j]= (String) ansArr.get(j);
+            }
+            JSONObject jsonHint = (JSONObject) ans.get("hint");
+            String[] hint = new String[2];
+            hint[0]= (String) jsonHint.get("nature");
+            hint[1]= (String) jsonHint.get("is");
+            answers[i]= new Answer(num_a,vis,accepted,hint);
+        }
     }
+
+
+
     public static void main(String[] args) throws IOException, ParseException {
 
         //System.out.println("panda !");
@@ -183,6 +222,7 @@ public class JsonTools {
         L.json_create("chat");
         L.load_player("panda");
         //System.out.println(L.getPlayer());
+        L.addQuestion();
 
     }
 
