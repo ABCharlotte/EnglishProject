@@ -81,31 +81,31 @@ public class JsonTools {
         return question;
     }
 
-    public void validQuestion(Question question) throws IOException, ParseException {
+    private void validQuestion(Question question) throws IOException, ParseException {
         FileReader reader = new FileReader(filePath);
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         JSONObject quest = (JSONObject) jsonFile.get(""+question.getNum_q()+"");
-        quest.put("validated",new Boolean(true));
+        quest.put("validated", Boolean.TRUE);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(prettyprint(jsonFile.toJSONString()));
+            writer.write(prettyPrint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
         }
     }
 
-    public void validAnswer(Question question, int num_a) throws IOException, ParseException {
+    void validAnswer(Question question, int num_a) throws IOException, ParseException {
         FileReader reader = new FileReader(filePath);
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         JSONObject quest = (JSONObject) jsonFile.get(""+question.getNum_q()+"");
         JSONArray answers = (JSONArray) quest.get("answers");
         JSONObject a = (JSONObject) answers.get(num_a-1);
-        a.put("visibility", new Boolean(true));
+        a.put("visibility", Boolean.TRUE);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(prettyprint(jsonFile.toJSONString()));
+            writer.write(prettyPrint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
         }
@@ -123,7 +123,7 @@ public class JsonTools {
         }
     }
 
-    public void load_player(String player) throws IOException, ParseException {
+    void load_player(String player) throws IOException, ParseException {
         filePath = "src/data/json/"+player.toLowerCase()+".json";
         if (Files.exists(Paths.get(filePath))){
             System.out.println("The file linked to the player " + player + " is loaded.");
@@ -132,14 +132,14 @@ public class JsonTools {
         }
     }
 
-    public void json_create(String player) throws IOException, ParseException {
+    private void json_create(String player) throws IOException, ParseException {
         filePath = "src/data/json/"+player.toLowerCase()+".json";
         FileReader reader = new FileReader("src/data/json/sauvDB.json");
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(prettyprint(jsonFile.toJSONString()));
+            writer.write(prettyPrint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
             System.out.println("The file linked to the player " + player + " is created. ");
@@ -147,7 +147,7 @@ public class JsonTools {
 
     }
 
-    public void json_erase(String player) throws IOException, ParseException {
+    void json_erase(String player) throws IOException, ParseException {
         if (player.equals("everybody")){
             this.json_create("everybody");
             System.out.println("The default file is reinitialised.");
@@ -159,19 +159,18 @@ public class JsonTools {
         load_player("everybody");
 
     }
-    public String prettyprint(String uglyJSONString){
+    private String prettyPrint(String uglyJSONString){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonParser jp = new JsonParser();
         JsonElement je = jp.parse(uglyJSONString);
-        String prettyJsonString = gson.toJson(je);
-        return prettyJsonString;
+        return gson.toJson(je);
     }
 
-    public String getPlayer() {
+    String getPlayer() {
         return filePath.substring(14,filePath.length()-5);
     }
 
-    public void addQuestion(Question q) throws IOException, ParseException {
+    void addQuestion(Question q) throws IOException, ParseException {
         FileReader reader = new FileReader("src/data/json/sauvDB.json");
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
@@ -202,9 +201,10 @@ public class JsonTools {
 
         File folder = new File("src/data/json/");
         File[] files = folder.listFiles();
+        assert files != null;
         for (File f : files){
             try (FileWriter writer = new FileWriter(f)) {
-                writer.write(prettyprint(jsonFile.toJSONString()));
+                writer.write(prettyPrint(jsonFile.toJSONString()));
                 writer.flush();
                 writer.close();
             }
@@ -214,22 +214,7 @@ public class JsonTools {
 
 
     public static void main(String[] args) throws IOException, ParseException {
-
-        //System.out.println("panda !");
-
-        JsonTools L = new JsonTools();
-        Question[] q= L.loadQuestions();
-        //System.out.println(q[0].getTheme());
-        Question qAndA = L.loadAnswers(7);
-        //System.out.println(qAndA.getAnswers()[0].getAccepted()[1]);
-        //System.out.println(qAndA.getAnswers()[2].getAccepted()[0]);
-        //System.out.println(qAndA.getAnswers()[2].isVisibility());
-        //L.validAnswer(qAndA,1);
-        //System.out.println(qAndA.getAnswers()[2].isVisibility());
-        System.out.println(qAndA.checkAnswers("back"));
-        L.json_create("chat");
-        L.load_player("panda");
-        //System.out.println(L.getPlayer();
+        System.out.println("panda !");
 
     }
 

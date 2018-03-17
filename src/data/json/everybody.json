@@ -75,7 +75,7 @@
       },
       {
         "number": 2,
-        "visibility": true,
+        "visibility": false,
         "answer": [
           "United States of America",
           "USA",
@@ -266,7 +266,7 @@
     "answers": [
       {
         "number": 1,
-        "visibility": true,
+        "visibility": false,
         "answer": [
           "Ravens",
           "crow",
@@ -460,13 +460,13 @@
     "theme": "CultureTODO"
   },
   "9": {
-    "validated": false,
+    "validated": true,
     "question": "src/data/images/BostonTeaParty.png",
     "nature": "Image",
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "1"
         ],
