@@ -17,6 +17,7 @@ public class AddQuestionController extends MenuController {
     public Button okButton;
     public Button plusButton;
     public TextField questionTextField;
+    public TextField themeTextField;
     private int questionNumber=0;
 
     @Override
@@ -40,15 +41,16 @@ public class AddQuestionController extends MenuController {
         this.rightVbox.getChildren().addAll(new Label("Hint "+this.questionNumber),new TextField());
     }
 
-    private String[] getQandA(){
-        String[] result= new String[questionNumber*2+1];
-        result[0]=this.questionTextField.getText();
+    private Question getQandA(){
+        Answer[] answers = new Answer[questionNumber];
         for (int i=1;i<=questionNumber;i++){
-            TextField temp=(TextField) this.leftVbox.getChildren().get(i*2-1);
-            result[i]=temp.getText();
-            temp=(TextField) this.rightVbox.getChildren().get(i*2-1);
-            result[i+questionNumber]=temp.getText();
+            TextField answer=(TextField) this.leftVbox.getChildren().get(i*2-1);
+            TextField hint=(TextField) this.rightVbox.getChildren().get(i*2-1);
+            String[] answerString={answer.getText()};
+            String[] hintString={"Text", hint.getText()};
+            answers[i-1]=new Answer(i,false,answerString,hintString);
         }
+        Question result= new Question(0,this.themeTextField.getText(),false,"Text",this.questionTextField.getText(),answers);
         return result;
     }
 }

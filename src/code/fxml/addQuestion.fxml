@@ -9,26 +9,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" stylesheets="@../main.css" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.AddQuestionController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.AddQuestionController">
     <BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <left>
             <VBox fx:id="leftVbox" prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
                 <padding>
-                    <Insets top="5.0"/>
+                    <Insets top="5.0" />
                 </padding>
-                <Button fx:id="plusButton" mnemonicParsing="false" onAction="#addQuestion" prefWidth="100.0" text="+"/>
+                <Button fx:id="plusButton" mnemonicParsing="false" onAction="#addQuestion" prefWidth="100.0" text="+" />
             </VBox>
         </left>
         <right>
           <VBox fx:id="rightVbox" prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER" />
         </right>
         <top>
-            <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
                 <Label text="Add a question">
                     <font>
                         <Font size="30.0" />
                     </font>
                 </Label>
+            <TextField fx:id="themeTextField" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" text="Write your theme here" />
                 <TextField fx:id="questionTextField" text="Write your question here" />
             <padding>
                <Insets bottom="20.0" left="20.0" right="20.0" />

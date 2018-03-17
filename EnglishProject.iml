@@ -145,5 +145,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="java-json.jar" level="project" />
   </component>
 </module>
