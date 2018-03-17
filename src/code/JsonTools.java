@@ -123,7 +123,7 @@ public class JsonTools {
     }
 
     public void load_player(String player) throws IOException, ParseException {
-        filePath = "src/data/"+player+".json";
+        filePath = "src/data/"+player.toLowerCase()+".json";
         if (Files.exists(Paths.get(filePath))){
             System.out.println("The file linked to the player " + player + " is loaded.");
         }else{
@@ -132,7 +132,7 @@ public class JsonTools {
     }
 
     public void json_create(String player) throws IOException, ParseException {
-        filePath = "src/data/"+player+".json";
+        filePath = "src/data/"+player.toLowerCase()+".json";
         FileReader reader = new FileReader("src/data/sauvDB.json");
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
@@ -151,7 +151,7 @@ public class JsonTools {
             this.json_create("everybody");
             System.out.println("The default file is reinitialised.");
         }else {
-            filePath = "src/data/" + player + ".json";
+            filePath = "src/data/" + player.toLowerCase() + ".json";
             Files.delete(Paths.get(filePath));
             System.out.println("The file linked to the player " + player + " is deleted. ");
         }
@@ -159,6 +159,13 @@ public class JsonTools {
 
     }
 
+    public String getPlayer() {
+        return filePath.substring(9,filePath.length()-5);
+    }
+
+    public void addQuestion(){
+
+    }
     public static void main(String[] args) throws IOException, ParseException {
 
         //System.out.println("panda !");
@@ -179,8 +186,6 @@ public class JsonTools {
 
     }
 
-    public String getPlayer() {
-        return filePath.substring(9,filePath.length()-5);
-    }
+
 }
 

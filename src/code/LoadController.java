@@ -23,7 +23,7 @@ public class LoadController extends MenuController{
     public void handleOK() throws IOException, ParseException {
         //System.out.println(this.textField.getText());
         JsonTools J = new JsonTools();
-        J.load_player(this.textField.getText());
+        J.load_player(this.textField.getText().toLowerCase());
         this.handleCancel();
     }
 }
