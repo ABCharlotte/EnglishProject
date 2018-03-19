@@ -20,8 +20,17 @@ public class Controller extends MenuController {
     private ScrollPane QuestionScrollPane;
     @FXML
     private GridPane GridQuestion;
-    private int column=0;
-    private int row=0;
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int column=0;
+    public int row=0;
     @FXML
     private BorderPane borderPane;
     public static Question loadedQuestion;

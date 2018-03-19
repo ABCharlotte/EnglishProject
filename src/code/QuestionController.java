@@ -56,8 +56,8 @@ public class QuestionController extends Controller {
     }
 
     private void updateAnswers() {
-            this.row=0;
-            this.column=0;
+            super.setRow(0);
+            super.setColumn(0);
             this.GridAnswers.getChildren().clear();
             JsonTools j = new JsonTools();
             activeQuestion=j.loadAnswers(activeQuestion.getNum_q());
