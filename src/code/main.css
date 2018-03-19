@@ -21,11 +21,11 @@
 }
 .text-field{
     -fx-text-fill: #ffffff;
-    -fx-background-color: #ee893c;
+    -fx-background-color: #342884;
 }
 .tab-pane .tab:selected
 {
-    -fx-background-color: #ee893c;
+    -fx-background-color: #342884;
 }
 
 .tab .tab-label {
@@ -38,16 +38,16 @@
 .tab:selected .tab-label {
     -fx-alignment: CENTER;
     -fx-text-fill: #ffffff;
-    -fx-border-color: #ee893c;
+    -fx-border-color: #81a1ee;
 
 }
 .button {
-    -fx-background-color: #ee893c;
-    -fx-text-fill: #ffffff;
+    -fx-background-color: #81a1ee;
+    -fx-text-fill: #060606;
 }
 .button:pressed {
     -fx-border-color:#ffffff;
-    -fx-background-color: #ee893c;
+    -fx-background-color: #c038ee;
 }
 .tool-bar {
     -fx-background-color: #fffffd;
@@ -59,11 +59,11 @@
 
 }
 .text-area{
-    -fx-background-color: #ee893c;
+    -fx-background-color: #81a1ee;
 
 }
 .text-area .content{
-    -fx-background-color: #ee893c;
+    -fx-background-color: #81a1ee;
     -fx-text-fill: #ffffff;
 }
 
@@ -78,7 +78,7 @@
 
 }
 .table-view .column-header{
-    -fx-background-color: #ee893c;
+    -fx-background-color: #342884;
     -fx-border-color: white;
 
 }
@@ -90,7 +90,7 @@
     -fx-background-color:  #7d3577;
 }
 .tree-table-view .column-header{
-    -fx-background-color: #ee893c;
+    -fx-background-color: #303fee;
 
 }
 .table-row-cell{

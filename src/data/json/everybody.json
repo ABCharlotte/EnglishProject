@@ -460,13 +460,13 @@
     "theme": "CultureTODO"
   },
   "9": {
-    "validated": false,
+    "validated": true,
     "question": "src/data/images/BostonTeaParty.png",
     "nature": "Image",
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "1"
         ],
@@ -477,35 +477,5 @@
       }
     ],
     "theme": "HistoryTODO"
-  },
-  "11": {
-    "validated": false,
-    "question": "Write your question here",
-    "nature": "Text",
-    "answers": [
-      {
-        "number": 1,
-        "visibility": false,
-        "answer": [
-          "q1"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "h1"
-        }
-      },
-      {
-        "number": 2,
-        "visibility": false,
-        "answer": [
-          "q2"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "h2"
-        }
-      }
-    ],
-    "theme": "Write your theme here"
   }
 }

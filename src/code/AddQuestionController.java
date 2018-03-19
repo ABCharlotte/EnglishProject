@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 
@@ -17,7 +18,8 @@ public class AddQuestionController extends MenuController {
     public Button okButton;
     public Button plusButton;
     public TextField questionTextField;
-    private int questionNumber=0;
+    public TextField themeTextField;
+    private int answerNumber =0;
 
     @Override
     public void initialize() {
@@ -25,8 +27,11 @@ public class AddQuestionController extends MenuController {
     }
 
     @FXML
-    private void handleOK() throws IOException {
-        this.getQandA();
+    private void handleOK() throws IOException, ParseException {
+        Question q = this.getQandA();
+        JsonTools J = new JsonTools();
+        J.addQuestion(q);
+        System.out.println("Question added");
         super.switchFXML("fxml/main.fxml");
     }
     @FXML
@@ -34,21 +39,22 @@ public class AddQuestionController extends MenuController {
         super.switchFXML("fxml/main.fxml");
     }
     public void addQuestion(){
-        this.leftVbox.getChildren().remove(questionNumber*2);
-        this.questionNumber++;
-        this.leftVbox.getChildren().addAll(new Label("Question "+this.questionNumber),new TextField(),this.plusButton);
-        this.rightVbox.getChildren().addAll(new Label("Hint "+this.questionNumber),new TextField());
+        this.leftVbox.getChildren().remove(answerNumber*2);
+        this.answerNumber++;
+        this.leftVbox.getChildren().addAll(new Label("Answer "+this.answerNumber),new TextField(),this.plusButton);
+        this.rightVbox.getChildren().addAll(new Label("Hint "+this.answerNumber),new TextField());
     }
 
-    private String[] getQandA(){
-        String[] result= new String[questionNumber*2+1];
-        result[0]=this.questionTextField.getText();
-        for (int i=1;i<=questionNumber;i++){
-            TextField temp=(TextField) this.leftVbox.getChildren().get(i*2-1);
-            result[i]=temp.getText();
-            temp=(TextField) this.rightVbox.getChildren().get(i*2-1);
-            result[i+questionNumber]=temp.getText();
+    private Question getQandA(){
+        Answer[] answers = new Answer[answerNumber];
+        for (int i = 1; i<= answerNumber; i++){
+            TextField answer=(TextField) this.leftVbox.getChildren().get(i*2-1);
+            TextField hint=(TextField) this.rightVbox.getChildren().get(i*2-1);
+            String[] answerString = {answer.getText()};
+            String[] hintString = {"Text", hint.getText()};
+            answers[i-1]=new Answer(i,false,answerString,hintString);
         }
+        Question result= new Question(0,this.themeTextField.getText(),false,"Text",this.questionTextField.getText(),answers);
         return result;
     }
 }

@@ -12,12 +12,12 @@ public class Question {
     private String question; //{text or path of the image}
     private Answer[] answers;
 
-    public Question(int num_q, String theme, boolean valid) {
+    Question(int num_q, String theme, boolean valid) {
         this.num_q = num_q;
         this.theme = theme;
         this.validated = valid;
     }
-    public Question(int num_q, String theme, boolean valid, String nature, String question, Answer[] answers) {
+    Question(int num_q, String theme, boolean valid, String nature, String question, Answer[] answers) {
         this.num_q = num_q;
         this.theme = theme;
         this.validated = valid;
@@ -30,15 +30,15 @@ public class Question {
         return num_q;
     }
 
-    public String getTheme() {
+    String getTheme() {
         return theme;
     }
 
-    public boolean isValidated() {
+    boolean isValidated() {
         return validated;
     }
 
-    public String getNature() {
+    String getNature() {
         return nature;
     }
 
@@ -62,5 +62,9 @@ public class Question {
             }
         }
         return false;
+    }
+
+    public void setNum(int num_q) {
+        this.num_q = num_q;
     }
 }

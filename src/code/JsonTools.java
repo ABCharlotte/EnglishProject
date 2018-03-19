@@ -1,10 +1,15 @@
 package code;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,10 +18,11 @@ import java.nio.file.Paths;
 
 
 public class JsonTools {
-    private static String filePath = "src/data/everybody.json";
+    private static String filePath = "src/data/json/everybody.json";
     //private static int nbOfQuest=3;
 
-    public  static Question[] loadQuestions(){
+    static Question[] loadQuestions(){
+
         Question[] questions = new Question[0];
         try {
             FileReader reader = new FileReader(filePath);
@@ -26,23 +32,20 @@ public class JsonTools {
             questions = new Question[nbOfQuest];
             for (int i = 0; i < nbOfQuest ; i++) {
                 JSONObject quest= (JSONObject) jsonQuest.get(""+i+"");
-                //System.out.println(i);
-                String theme = (String) quest.get("theme");
                 //System.out.println("theme question "+i+":"+quest.get("theme"));
+                String theme = (String) quest.get("theme");
                 boolean val = quest.get("validated").equals(true);
                 Question question = new Question(i,theme, val);
                 questions[i]=question;
             }
 
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
         return questions;
     }
 
-    public static Question loadAnswers(int num_q){
+    static Question loadAnswers(int num_q){
         Question question = new Question(num_q,"error",false);
         try {
             FileReader reader = new FileReader(filePath);
@@ -72,39 +75,37 @@ public class JsonTools {
             }
             question = new Question(num_q,theme,val,nature,text,answers);
             reader.close();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
         return question;
     }
 
-    public void validQuestion(Question question) throws IOException, ParseException {
+    private void validQuestion(Question question) throws IOException, ParseException {
         FileReader reader = new FileReader(filePath);
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         JSONObject quest = (JSONObject) jsonFile.get(""+question.getNum_q()+"");
-        quest.put("validated",new Boolean(true));
+        quest.put("validated", Boolean.TRUE);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(jsonFile.toJSONString());
+            writer.write(prettyPrint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
         }
     }
 
-    public void validAnswer(Question question, int num_a) throws IOException, ParseException {
+    void validAnswer(Question question, int num_a) throws IOException, ParseException {
         FileReader reader = new FileReader(filePath);
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         JSONObject quest = (JSONObject) jsonFile.get(""+question.getNum_q()+"");
         JSONArray answers = (JSONArray) quest.get("answers");
         JSONObject a = (JSONObject) answers.get(num_a-1);
-        a.put("visibility", new Boolean(true));
+        a.put("visibility", Boolean.TRUE);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(jsonFile.toJSONString());
+            writer.write(prettyPrint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
         }
@@ -122,8 +123,8 @@ public class JsonTools {
         }
     }
 
-    public void load_player(String player) throws IOException, ParseException {
-        filePath = "src/data/"+player+".json";
+    void load_player(String player) throws IOException, ParseException {
+        filePath = "src/data/json/"+player.toLowerCase()+".json";
         if (Files.exists(Paths.get(filePath))){
             System.out.println("The file linked to the player " + player + " is loaded.");
         }else{
@@ -131,14 +132,14 @@ public class JsonTools {
         }
     }
 
-    public void json_create(String player) throws IOException, ParseException {
-        filePath = "src/data/"+player+".json";
-        FileReader reader = new FileReader("src/data/sauvDB.json");
+    private void json_create(String player) throws IOException, ParseException {
+        filePath = "src/data/json/"+player.toLowerCase()+".json";
+        FileReader reader = new FileReader("src/data/json/sauvDB.json");
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
         reader.close();
         try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(jsonFile.toJSONString());
+            writer.write(prettyPrint(jsonFile.toJSONString()));
             writer.flush();
             writer.close();
             System.out.println("The file linked to the player " + player + " is created. ");
@@ -146,41 +147,77 @@ public class JsonTools {
 
     }
 
-    public void json_erase(String player) throws IOException, ParseException {
+    void json_erase(String player) throws IOException, ParseException {
         if (player.equals("everybody")){
             this.json_create("everybody");
             System.out.println("The default file is reinitialised.");
         }else {
-            filePath = "src/data/" + player + ".json";
+            filePath = "src/data/json/" + player.toLowerCase() + ".json";
             Files.delete(Paths.get(filePath));
             System.out.println("The file linked to the player " + player + " is deleted. ");
         }
         load_player("everybody");
 
     }
+    private String prettyPrint(String uglyJSONString){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(uglyJSONString);
+        return gson.toJson(je);
+    }
+
+    String getPlayer() {
+        return filePath.substring(14,filePath.length()-5);
+    }
+
+    void addQuestion(Question q) throws IOException, ParseException {
+        FileReader reader = new FileReader("src/data/json/sauvDB.json");
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonFile = (JSONObject) jsonParser.parse(reader);
+        int num_q = jsonFile.size();
+        reader.close();
+        q.setNum(num_q);
+        JSONObject quest = new JSONObject();
+        quest.put("theme", q.getTheme());
+        quest.put("validated", q.isValidated());
+        quest.put("nature", q.getNature());
+        quest.put("question", q.getQuestion());
+        JSONArray ansArray = new JSONArray();
+        for (int i=0; i< q.getAnswers().length; i++){
+            JSONObject ans = new JSONObject();
+            ans.put("number",q.getAnswers()[i].getNum_a());
+            ans.put("visibility",q.getAnswers()[i].isVisibility());
+            JSONArray accepted = new JSONArray();
+            accepted.add(0,q.getAnswers()[i].getAccepted()[0]);
+            ans.put("answer", accepted);
+            JSONObject hint = new JSONObject();
+            hint.put("nature",q.getAnswers()[i].getHint()[0]);
+            hint.put("is",q.getAnswers()[i].getHint()[1]);
+            ans.put("hint", hint);
+            ansArray.add(i,ans);
+        }
+        quest.put("answers",ansArray);
+        jsonFile.put(num_q, quest);
+
+        File folder = new File("src/data/json/");
+        File[] files = folder.listFiles();
+        assert files != null;
+        for (File f : files){
+            try (FileWriter writer = new FileWriter(f)) {
+                writer.write(prettyPrint(jsonFile.toJSONString()));
+                writer.flush();
+                writer.close();
+            }
+        }
+    }
+
+
 
     public static void main(String[] args) throws IOException, ParseException {
-
-        //System.out.println("panda !");
-
-        JsonTools L = new JsonTools();
-        Question[] q= L.loadQuestions();
-        //System.out.println(q[0].getTheme());
-        Question qAndA = L.loadAnswers(7);
-        //System.out.println(qAndA.getAnswers()[0].getAccepted()[1]);
-        //System.out.println(qAndA.getAnswers()[2].getAccepted()[0]);
-        //System.out.println(qAndA.getAnswers()[2].isVisibility());
-        //L.validAnswer(qAndA,1);
-        //System.out.println(qAndA.getAnswers()[2].isVisibility());
-        System.out.println(qAndA.checkAnswers("back"));
-        L.json_create("chat");
-        L.load_player("panda");
-        //System.out.println(L.getPlayer());
+        System.out.println("panda !");
 
     }
 
-    public String getPlayer() {
-        return filePath.substring(9,filePath.length()-5);
-    }
+
 }
 

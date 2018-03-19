@@ -78,9 +78,9 @@ public class QuestionController {
             activeQuestion=j.loadAnswers(activeQuestion.getNum_q());
             for (int i=0;i<this.activeQuestion.getAnswers().length;i++){
                 Answer answer =this.activeQuestion.getAnswers()[i];
-                Button AnswerButton = new Button(""+answer.getNum_a());
+                Button AnswerButton = new Button("      "+answer.getNum_a()+ "\n click for hint");
                 if(answer.isVisibility()){
-                    AnswerButton.setStyle("-fx-background-color: #00ff00");
+                    AnswerButton.setStyle("-fx-background-color: #68e0ee");
                     AnswerButton.setText(answer.getAccepted()[0]);
                 }
                 int temp = i;
@@ -105,7 +105,7 @@ public class QuestionController {
         double width=stage.getWidth();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
-        //create a new scene with root and set the stage
+        //create a new scene with root and setNum the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setHeight(height);

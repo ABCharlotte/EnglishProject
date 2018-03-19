@@ -8,10 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class Controller extends MenuController {
@@ -27,16 +25,8 @@ public class Controller extends MenuController {
     @FXML
     private BorderPane borderPane;
 
-    private JsonTools L= new JsonTools();
-
     public void initialize() {
         updateQuestions();
-    }
-    private double getScaleFactor() {
-        double trueHorizontalLines = Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-        double scaledHorizontalLines = Screen.getPrimary().getBounds().getHeight();
-        double dpiScaleFactor = trueHorizontalLines / scaledHorizontalLines;
-        return dpiScaleFactor;
     }
 
     private void addButton(Button button, GridPane grid) {
@@ -44,8 +34,8 @@ public class Controller extends MenuController {
         button.setMaxSize(100,100);
         button.setWrapText(true);
         grid.add(button, column, row);
-        int div = (int) (borderPane.getWidth()/(120*getScaleFactor()));
-        //System.out.println(getScaleFactor());
+        int div = (int) (borderPane.getWidth()/120);
+        //System.out.println(this.mainPane.getWidth());
         if (div==0){
             div=6;
         }
@@ -60,11 +50,12 @@ public class Controller extends MenuController {
         this.row=0;
         this.column=0;
         this.GridQuestion.getChildren().clear();
-        Question[] q = L.loadQuestions();
-        for (int i=0;i<q.length;i++){
+        JsonTools J = new JsonTools();
+        Question[] q = J.loadQuestions();
+        for (int i=1;i<q.length;i++){
             Button QuestionButton = new Button("Question : "+i+"\n \n"+q[i].getTheme());
             if(q[i].isValidated()){
-                QuestionButton.setStyle("-fx-background-color: #00ff00");
+                QuestionButton.setStyle("-fx-background-color: #68e0ee");
             }
             int temp = i;
             QuestionButton.setOnAction(event -> {
@@ -91,7 +82,7 @@ public class Controller extends MenuController {
         JsonTools L = new JsonTools();
         Question q = L.loadAnswers(number_q);
         questionController.initialize(q);
-        //create a new scene with root and set the stage
+        //create a new scene with root and setNum the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setHeight(height);

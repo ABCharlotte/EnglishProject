@@ -31,7 +31,7 @@ public class LoadController extends MenuController{
         double width=stage.getWidth();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getResource(name));
-        //create a new scene with root and set the stage
+        //create a new scene with root and setNum the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setHeight(height);
@@ -46,7 +46,7 @@ public class LoadController extends MenuController{
     public void handleOK() throws IOException, ParseException {
         //System.out.println(this.textField.getText());
         JsonTools J = new JsonTools();
-        J.load_player(this.textField.getText());
+        J.load_player(this.textField.getText().toLowerCase());
         this.switchFXML("fxml/Menu.fxml","English Project: "+J.getPlayer());
     }
 }
