@@ -810,6 +810,28 @@
         "number": 8,
         "visibility": false,
         "answer": [
+          "Houston"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/ho.png"
+        }
+      },
+      {
+        "number": 9,
+        "visibility": false,
+        "answer": [
+          "Atlanta"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/atl.png"
+        }
+      },
+      {
+        "number": 10,
+        "visibility": false,
+        "answer": [
           "Boston"
         ],
         "hint": {
@@ -818,7 +840,18 @@
         }
       },
       {
-        "number": 9,
+        "number": 11,
+        "visibility": false,
+        "answer": [
+          "Detroit"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/det.png"
+        }
+      },
+      {
+        "number": 12,
         "visibility": false,
         "answer": [
           "Seattle"
@@ -826,6 +859,17 @@
         "hint": {
           "nature": "Image",
           "is": "src/data/images/cities/se.png"
+        }
+      },
+      {
+        "number": 13,
+        "visibility": false,
+        "answer": [
+          "Dallas"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/da.png"
         }
       }
     ],
