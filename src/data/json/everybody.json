@@ -460,13 +460,13 @@
     "theme": "CultureTODO"
   },
   "9": {
-    "validated": true,
+    "validated": false,
     "question": "src/data/images/BostonTeaParty.png",
     "nature": "Image",
     "answers": [
       {
         "number": 1,
-        "visibility": true,
+        "visibility": false,
         "answer": [
           "1"
         ],

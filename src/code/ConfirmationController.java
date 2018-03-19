@@ -19,6 +19,8 @@ public class ConfirmationController extends MenuController {
     public void handleYesButton(ActionEvent actionEvent) throws IOException, ParseException {
         JsonTools J = new JsonTools();
         J.json_erase(J.getPlayer());
+        Stage stage =(Stage) this.borderPane.getScene().getWindow();
+        stage.setTitle("English Project");
         switchFXML("fxml/Menu.fxml");
     }
 
