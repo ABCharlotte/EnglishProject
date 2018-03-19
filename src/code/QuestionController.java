@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.json.simple.parser.ParseException;
@@ -18,7 +19,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-public class QuestionController {
+public class QuestionController extends Controller {
     public Button BackButton;
     public Label LabelQuestion;
     public GridPane GridAnswers;
@@ -26,22 +27,22 @@ public class QuestionController {
     public TextField AnswerText;
     public Button OKButton;
     public Label ErrorLabel;
+    public BorderPane borderPane;
     private int row;
     private int column;
     private Question activeQuestion;
 
-    public void initialize(Question question) throws MalformedURLException {
-        this.activeQuestion=question;
-        if(question.getNature().equals("Text")){
-            this.LabelQuestion.setText(question.getQuestion());
+    public void initialize() {
+        this.activeQuestion=Controller.loadedQuestion;
+        if(Controller.loadedQuestion.getNature().equals("Text")){
+            this.LabelQuestion.setText(Controller.loadedQuestion.getQuestion());
         }
         else{
-            this.ImageView.setFitHeight(300);
-            this.ImageView.setFitWidth(300);
-            this.ImageView.maxHeight(500);
-            this.ImageView.maxWidth(800);
+            this.ImageView.setFitHeight(400);
+            this.ImageView.setFitWidth(400);
+            this.ImageView.setPreserveRatio(true);
             try {
-                FileInputStream inputStream = new FileInputStream(question.getQuestion());
+                FileInputStream inputStream = new FileInputStream(Controller.loadedQuestion.getQuestion());
                 Image im = new Image(inputStream);
                 this.ImageView.setImage(im);
             } catch (FileNotFoundException e) {
@@ -53,23 +54,7 @@ public class QuestionController {
         updateAnswers();
 
     }
-    private void addButton(Button button, GridPane grid) {
-        button.setMinSize(100,100);
-        button.setMaxSize(100,100);
-        button.setWrapText(true);
-        grid.add(button, column, row);
-        int div = (int) (grid.getWidth()/120);
-        //System.out.println(this.mainPane.getWidth());
-        if (div==0){
-            div=6;
-        }
-        if (column < div) {
-            this.column++;
-        } else {
-            this.column = 0;
-            this.row++;
-        }
-    }
+
     private void updateAnswers() {
             this.row=0;
             this.column=0;
@@ -91,12 +76,12 @@ public class QuestionController {
                         e.printStackTrace();
                     }
                 });
-                addButton(AnswerButton,GridAnswers);
+                super.addButton(AnswerButton,GridAnswers);
             }
         }
 
     @FXML
-    private void handleBackButton() throws Exception{
+    public void handleBackButton() throws IOException {
         Stage stage;
         Parent root;
         //get reference to the button's stage

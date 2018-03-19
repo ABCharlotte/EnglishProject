@@ -24,12 +24,12 @@ public class Controller extends MenuController {
     private int row=0;
     @FXML
     private BorderPane borderPane;
-
+    public static Question loadedQuestion;
     public void initialize() {
         updateQuestions();
     }
 
-    private void addButton(Button button, GridPane grid) {
+    public void addButton(Button button, GridPane grid) {
         button.setMinSize(100,100);
         button.setMaxSize(100,100);
         button.setWrapText(true);
@@ -69,25 +69,8 @@ public class Controller extends MenuController {
         }
     }
     private void handleButtonAction(int number_q) throws Exception{
-        Stage stage;
-        Parent root;
-        //get reference to the button's stage
-        stage=(Stage) GridQuestion.getScene().getWindow();
-        double height=stage.getHeight();
-        double width=stage.getWidth();
-        //load up OTHER FXML document
-        FXMLLoader fxmlLoader=new FXMLLoader();
-        root = fxmlLoader.load(getClass().getResource("fxml/Question.fxml").openStream());
-        QuestionController questionController= fxmlLoader.getController();
-        JsonTools L = new JsonTools();
-        Question q = L.loadAnswers(number_q);
-        questionController.initialize(q);
-        //create a new scene with root and setNum the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.show();
+        loadedQuestion = JsonTools.loadAnswers(number_q);
+        switchFXML("fxml/Question.fxml");
     }
 
     public void handleBackButton() throws IOException {
