@@ -95,6 +95,9 @@ public class QuestionController extends Controller {
             //imageView.setFitWidth(300);
             try {
                 imageView.setImage(new Image(new FileInputStream(answer.getHint()[1])));
+                imageView.setFitHeight(400);
+                imageView.setFitWidth(400);
+                imageView.setPreserveRatio(true);
                 this.GridAnswers.add(imageView,0,1);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
