@@ -82,20 +82,7 @@ public class QuestionController extends Controller {
 
     @FXML
     public void handleBackButton() throws IOException {
-        Stage stage;
-        Parent root;
-        //get reference to the button's stage
-        stage=(Stage) GridAnswers.getScene().getWindow();
-        double height=stage.getHeight();
-        double width=stage.getWidth();
-        //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
-        //create a new scene with root and setNum the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.show();
+        switchFXML("fxml/main.fxml");
     }
     private void handleAnswerButton(Answer answer){
         this.GridAnswers.getChildren().clear();
