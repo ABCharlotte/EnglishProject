@@ -39,11 +39,12 @@ public class Controller extends MenuController {
     }
 
     public void addButton(Button button, GridPane grid) {
-        button.setMinSize(100,100);
-        button.setMaxSize(100,100);
+        int buttonsize=120;
+        button.setMinSize(buttonsize,buttonsize);
+        button.setMaxSize(buttonsize,buttonsize);
         button.setWrapText(true);
         grid.add(button, column, row);
-        int div = (int) (borderPane.getWidth()/120);
+        int div = (int) (borderPane.getWidth()/(buttonsize+20));
         //System.out.println(this.mainPane.getWidth());
         if (div==0){
             div=6;
