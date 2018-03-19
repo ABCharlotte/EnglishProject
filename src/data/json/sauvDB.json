@@ -1,12 +1,12 @@
 {
   "0": {
-    "theme": "Culture",
     "validated": false,
-    "nature": "Image",
     "question": "src/data/images/test.png",
+    "nature": "Image",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
           "Test"
         ],
@@ -16,9 +16,11 @@
         }
       },
       {
-        "number": 2,        "visibility": true,
+        "number": 2,
+        "visibility": true,
         "answer": [
-          "Panda", "panda"
+          "Panda",
+          "panda"
         ],
         "hint": {
           "nature": "Text",
@@ -26,9 +28,11 @@
         }
       },
       {
-        "number": 3,        "visibility": false,
+        "number": 3,
+        "visibility": false,
         "answer": [
-          "Child", "children"
+          "Child",
+          "children"
         ],
         "hint": {
           "nature": "Text",
@@ -36,23 +40,31 @@
         }
       },
       {
-        "number": 4,        "visibility": false,
+        "number": 4,
+        "visibility": false,
         "answer": [
-          "Cuddly Toy","teddy", "teddy bear","soft toy","toy"
+          "Cuddly Toy",
+          "teddy",
+          "teddy bear",
+          "soft toy",
+          "toy"
         ],
         "hint": {
           "nature": "Text",
           "is": "C _ _ _ _ _      T _ _ "
         }
       }
-    ]
+    ],
+    "theme": "Culture"
   },
   "1": {
-    "theme": "Geography",       "validated": false,         "nature": "Text",
+    "validated": false,
     "question": "English Speaking Countries",
+    "nature": "Text",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
           "England"
         ],
@@ -62,9 +74,15 @@
         }
       },
       {
-        "number": 2,        "visibility": false,
+        "number": 2,
+        "visibility": false,
         "answer": [
-          "United States of America", "USA", "u.s.a.", "United States", "US", "U.S."
+          "United States of America",
+          "USA",
+          "u.s.a.",
+          "United States",
+          "US",
+          "U.S."
         ],
         "hint": {
           "nature": "Image",
@@ -72,7 +90,8 @@
         }
       },
       {
-        "number": 3,        "visibility": false,
+        "number": 3,
+        "visibility": false,
         "answer": [
           "Australia"
         ],
@@ -82,9 +101,12 @@
         }
       },
       {
-        "number": 4,        "visibility": false,
+        "number": 4,
+        "visibility": false,
         "answer": [
-          "United Kingdom","UK","U.K."
+          "United Kingdom",
+          "UK",
+          "U.K."
         ],
         "hint": {
           "nature": "Image",
@@ -92,9 +114,12 @@
         }
       },
       {
-        "number": 5,        "visibility": false,
+        "number": 5,
+        "visibility": false,
         "answer": [
-          "Ireland", "north ireland","south ireland"
+          "Ireland",
+          "north ireland",
+          "south ireland"
         ],
         "hint": {
           "nature": "Image",
@@ -102,7 +127,8 @@
         }
       },
       {
-        "number": 6,        "visibility": false,
+        "number": 6,
+        "visibility": false,
         "answer": [
           "Scotland"
         ],
@@ -112,7 +138,8 @@
         }
       },
       {
-        "number": 7,        "visibility": false,
+        "number": 7,
+        "visibility": false,
         "answer": [
           "India"
         ],
@@ -122,7 +149,8 @@
         }
       },
       {
-        "number": 8,        "visibility": false,
+        "number": 8,
+        "visibility": false,
         "answer": [
           "Canada"
         ],
@@ -132,9 +160,11 @@
         }
       },
       {
-        "number": 9,        "visibility": false,
+        "number": 9,
+        "visibility": false,
         "answer": [
-          "New Zealand","Zealand"
+          "New Zealand",
+          "Zealand"
         ],
         "hint": {
           "nature": "Image",
@@ -142,7 +172,8 @@
         }
       },
       {
-        "number": 10,        "visibility": false,
+        "number": 10,
+        "visibility": false,
         "answer": [
           "South Africa"
         ],
@@ -152,7 +183,8 @@
         }
       },
       {
-        "number": 11,        "visibility": false,
+        "number": 11,
+        "visibility": false,
         "answer": [
           "Wales"
         ],
@@ -161,15 +193,17 @@
           "is": "src/data/images/flags/wales.png"
         }
       }
-
-    ]
+    ],
+    "theme": "Geography"
   },
   "2": {
-    "theme": "Grammar",       "validated": false,         "nature": "Text",
+    "validated": false,
     "question": "PHRASAL VERBS \n to come ____ ",
+    "nature": "Text",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
           "Back"
         ],
@@ -179,7 +213,8 @@
         }
       },
       {
-        "number": 2,        "visibility": false,
+        "number": 2,
+        "visibility": false,
         "answer": [
           "In"
         ],
@@ -189,7 +224,8 @@
         }
       },
       {
-        "number": 3,        "visibility": false,
+        "number": 3,
+        "visibility": false,
         "answer": [
           "Out"
         ],
@@ -199,7 +235,8 @@
         }
       },
       {
-        "number": 4,        "visibility": false,
+        "number": 4,
+        "visibility": false,
         "answer": [
           "Over"
         ],
@@ -209,26 +246,55 @@
         }
       },
       {
-        "number": 5,        "visibility": false,
+        "number": 5,
+        "visibility": false,
         "answer": [
           "Up With"
         ],
         "hint": {
           "nature": "Text",
-          "is": "Find, invent"
+          "is": "Find, invent, imagine"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "Across"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "Find by chance"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "Through"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "Succeed"
         }
       }
-
-    ]
+    ],
+    "theme": "Grammar"
   },
   "3": {
-    "theme": "History",       "validated": false,          "nature": "Image",
+    "validated": false,
     "question": "src/data/images/raven_london.png",
+    "nature": "Image",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
-          "Ravens", "crow", "Raven", "crows", "Ravens of the Tower of London"
+          "Ravens",
+          "crow",
+          "Raven",
+          "crows",
+          "Ravens of the Tower of London"
         ],
         "hint": {
           "nature": "Text",
@@ -236,9 +302,11 @@
         }
       },
       {
-        "number": 2,        "visibility": false,
+        "number": 2,
+        "visibility": false,
         "answer": [
-          "Tower of London", "London"
+          "Tower of London",
+          "London"
         ],
         "hint": {
           "nature": "Text",
@@ -246,9 +314,12 @@
         }
       },
       {
-        "number": 3,        "visibility": false,
+        "number": 3,
+        "visibility": false,
         "answer": [
-          "Crown", "Queen", "Crown of England"
+          "Crown",
+          "Queen",
+          "Crown of England"
         ],
         "hint": {
           "nature": "Text",
@@ -256,9 +327,13 @@
         }
       },
       {
-        "number": 4,        "visibility": false,
+        "number": 4,
+        "visibility": false,
         "answer": [
-          "England", "United Kingdom", "uk","U.K."
+          "England",
+          "United Kingdom",
+          "uk",
+          "U.K."
         ],
         "hint": {
           "nature": "Image",
@@ -266,25 +341,139 @@
         }
       },
       {
-        "number": 4,        "visibility": false,
+        "number": 4,
+        "visibility": false,
         "answer": [
-          "Bobby", "Guard"
+          "Bobby",
+          "Guard"
         ],
         "hint": {
           "nature": "Text",
           "is": "B _ _ _ _ "
         }
       }
-    ]
+    ],
+    "theme": "Culture"
   },
   "4": {
-    "theme": "CultureTODO",       "validated": false,         "nature": "Text",
-    "question": "New York City",
+    "validated": false,
+    "question": "King or Queen of England",
+    "nature": "Text",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
-          "United States of America", "USA", "U.S.A.", "United States", "US", "U.S."
+          "Elisabeth I st",
+          "Elisabeth I",
+          "Elisabeth 1st",
+          "Elisabeth First",
+          "Elisabeth 1 st",
+          "Elisabeth Ist"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/K_Q/eli1.png"
+        }
+      },
+      {
+        "number": 2,
+        "visibility": false,
+        "answer": [
+          "Henry VIII",
+          "Henry 8"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/K_Q/h8.png"
+        }
+      },
+      {
+        "number": 3,
+        "visibility": false,
+        "answer": [
+          "Victoria"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/K_Q/vict.png"
+        }
+      },
+      {
+        "number": 4,
+        "visibility": false,
+        "answer": [
+          "Elisabeth II nd",
+          "Elisabeth IInd",
+          "Elisabeth II",
+          "Elisabeth 2 nd",
+          "Elisabeth 2nd",
+          "Elisabeth 2",
+          "Elisabeth Second"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/K_Q/eli2.png"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Richard I st (the Lionheart)",
+          "Richard Ist",
+          "Lionheart",
+          "Richard the Lionheart",
+          "Richard Lionheart",
+          "Richard First",
+          "Richard 1st",
+          "Richard I",
+          "Richard 1",
+          "Richard 1 st"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/K_Q/rich.png"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "William I st (the Conqueror)",
+          "William Ist",
+          "William I st",
+          "William I",
+          "William 1st",
+          "William 1 st",
+          "William 1",
+          "William First",
+          "William the Conqueror",
+          "William Conqueror"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/K_Q/will.png"
+        }
+      }
+    ],
+    "theme": "History"
+  },
+  "5": {
+    "validated": false,
+    "question": "New York City",
+    "nature": "Text",
+    "answers": [
+      {
+        "number": 1,
+        "visibility": false,
+        "answer": [
+          "United States of America",
+          "USA",
+          "U.S.A.",
+          "United States",
+          "US",
+          "U.S."
         ],
         "hint": {
           "nature": "Image",
@@ -292,82 +481,219 @@
         }
       },
       {
-        "number": 2,        "visibility": false,
+        "number": 2,
+        "visibility": false,
         "answer": [
-          "Manhattan","Queens","Bronx","Staten Island", "Brooklyn"
+          "Manhattan",
+          "Queens",
+          "Bronx",
+          "Staten Island",
+          "Brooklyn"
         ],
         "hint": {
           "nature": "Text",
-          "is": "District"
+          "is": "A famous District"
         }
       },
       {
-        "number": 3,        "visibility": false,
+        "number": 3,
+        "visibility": false,
         "answer": [
-          "Big Apple"
+          "Big Apple",
+          "The City that never sleeps",
+          "Empire State"
         ],
         "hint": {
           "nature": "Text",
           "is": "Nickname"
         }
-      }
-
-    ]
-  },
-  "5": {
-    "theme": "HistoryTODO",       "validated": false,         "nature": "Text",
-    "question": "King or Queen of England",
-    "answers": [
+      },
       {
-        "number": 1,        "visibility": false,
+        "number": 4,
+        "visibility": false,
         "answer": [
-          "1"
+          "Statue of Liberty",
+          "Liberty Enlightening the World"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/monuments/stat_liberty.png"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Taxis",
+          "Taxi",
+          "Cab",
+          "cabs"
         ],
         "hint": {
           "nature": "Text",
-          "is": "1"
+          "is": "Yellows"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "Empire State Building"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/monuments/empire.png"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "Chrysler Building"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/monuments/chrysler.png"
+        }
+      },
+      {
+        "number": 8,
+        "visibility": false,
+        "answer": [
+          "Central Park"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/monuments/central_park.png"
+        }
+      },
+      {
+        "number": 9,
+        "visibility": false,
+        "answer": [
+          "Skyscrapers"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "S _ _ _ _ _ _ _ _ _ _ "
+        }
+      },
+      {
+        "number": 10,
+        "visibility": false,
+        "answer": [
+          "Grand Central Terminal",
+          "Grand Central Station",
+          "Grand Central"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/monuments/grand_central.png"
         }
       }
-    ]
+    ],
+    "theme": "Culture"
   },
   "6": {
-    "theme": "VocabularyTODO",       "validated": false,         "nature": "Text",
+    "validated": false,
     "question": "Weather",
+    "nature": "Text",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
-          "1"
+          "Sunny",
+          "Sun"
         ],
         "hint": {
           "nature": "Text",
-          "is": "1"
+          "is": "S _ _ _ _"
         }
-      }
-    ]
-  },
-  "7": {
-    "theme": "GeographyTODO",       "validated": false,         "nature": "Text",
-    "question": "Big cities of United States of America",
-    "answers": [
+      },
       {
-        "number": 1,        "visibility": false,
+        "number": 2,
+        "visibility": false,
         "answer": [
-          "1"
+          "Cloudy",
+          "Cloud"
         ],
         "hint": {
           "nature": "Text",
-          "is": "1"
+          "is": "C _ _ _ _ _ "
+        }
+      },
+      {
+        "number": 3,
+        "visibility": false,
+        "answer": [
+          "Rainy",
+          "Rain"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "R _ _ _ _"
+        }
+      },
+      {
+        "number": 4,
+        "visibility": false,
+        "answer": [
+          "Snowy",
+          "Snow"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "S _ _ _ _"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Windy",
+          "Wind"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "W _ _ _ _"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "Stormy",
+          "Storm"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "S _ _ _ _ _"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "Foggy",
+          "Fog"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "F _ _ _ _"
         }
       }
-    ]
+    ],
+    "theme": "Vocabulary"
   },
   "8": {
-    "theme": "CultureTODO",       "validated": false,         "nature": "Text",
+    "validated": false,
     "question": "Famous Bands",
+    "nature": "Text",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
           "1"
         ],
@@ -376,14 +702,17 @@
           "is": "1"
         }
       }
-    ]
+    ],
+    "theme": "CultureTODO"
   },
   "9": {
-    "theme": "HistoryTODO",       "validated": false,         "nature": "Image",
+    "validated": false,
     "question": "src/data/images/BostonTeaParty.png",
+    "nature": "Image",
     "answers": [
       {
-        "number": 1,        "visibility": false,
+        "number": 1,
+        "visibility": false,
         "answer": [
           "1"
         ],
@@ -392,6 +721,114 @@
           "is": "1"
         }
       }
-    ]
+    ],
+    "theme": "HistoryTODO"
+  },
+  "7": {
+    "validated": false,
+    "question": "Famous cities of United States of America",
+    "nature": "Text",
+    "answers": [
+      {
+        "number": 1,
+        "visibility": false,
+        "answer": [
+          "New York City", "New York", "NY", "n.y.", "NYC", "n.y.c."
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/ny.png"
+        }
+      },
+      {
+        "number": 2,
+        "visibility": false,
+        "answer": [
+          "Washington DC", "Washington"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/wash.png"
+        }
+      },
+      {
+        "number": 3,
+        "visibility": false,
+        "answer": [
+          "Los Angeles", "LA", "L.A."
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/la.png"
+        }
+      },
+      {
+        "number": 4,
+        "visibility": false,
+        "answer": [
+          "Las Vegas", "LV", "L.V."
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/lv.png"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Chicago"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/chi.png"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "Miami"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/mi.png"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "San Francisco", "SF", "S.F."
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/sf.png"
+        }
+      },
+      {
+        "number": 8,
+        "visibility": false,
+        "answer": [
+          "Boston"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/bos.png"
+        }
+      },
+      {
+        "number": 9,
+        "visibility": false,
+        "answer": [
+          "Seattle"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/se.png"
+        }
+      }
+    ],
+    "theme": "Geography"
   }
 }
