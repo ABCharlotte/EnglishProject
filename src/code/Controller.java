@@ -8,8 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class Controller extends MenuController {
@@ -30,12 +32,20 @@ public class Controller extends MenuController {
     public void initialize() {
         updateQuestions();
     }
+    private double getScaleFactor() {
+        double trueHorizontalLines = Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+        double scaledHorizontalLines = Screen.getPrimary().getBounds().getHeight();
+        double dpiScaleFactor = trueHorizontalLines / scaledHorizontalLines;
+        return dpiScaleFactor;
+    }
 
     private void addButton(Button button, GridPane grid) {
         button.setMinSize(100,100);
+        button.setMaxSize(100,100);
+        button.setWrapText(true);
         grid.add(button, column, row);
-        int div = (int) (grid.getWidth()/120);
-        //System.out.println(this.mainPane.getWidth());
+        int div = (int) (borderPane.getWidth()/(120*getScaleFactor()));
+        //System.out.println(getScaleFactor());
         if (div==0){
             div=6;
         }

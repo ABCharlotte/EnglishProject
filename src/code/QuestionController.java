@@ -38,6 +38,8 @@ public class QuestionController {
         else{
             this.ImageView.setFitHeight(300);
             this.ImageView.setFitWidth(300);
+            this.ImageView.maxHeight(500);
+            this.ImageView.maxWidth(800);
             try {
                 FileInputStream inputStream = new FileInputStream(question.getQuestion());
                 Image im = new Image(inputStream);
@@ -53,6 +55,8 @@ public class QuestionController {
     }
     private void addButton(Button button, GridPane grid) {
         button.setMinSize(100,100);
+        button.setMaxSize(100,100);
+        button.setWrapText(true);
         grid.add(button, column, row);
         int div = (int) (grid.getWidth()/120);
         //System.out.println(this.mainPane.getWidth());
