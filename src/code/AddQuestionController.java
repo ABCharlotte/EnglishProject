@@ -3,6 +3,7 @@ package code;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -19,11 +20,17 @@ public class AddQuestionController extends MenuController {
     public Button plusButton;
     public TextField questionTextField;
     public TextField themeTextField;
+    public ScrollPane scrPane;
+    public BorderPane scrlBorderPane;
     private int answerNumber =0;
 
     @Override
     public void initialize() {
         this.addQuestion();
+    }
+
+    public void update(){
+        this.scrlBorderPane.setPrefWidth(this.scrPane.getWidth());
     }
 
     @FXML

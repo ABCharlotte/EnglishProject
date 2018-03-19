@@ -11,20 +11,6 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.AddQuestionController">
     <BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <left>
-            <VBox fx:id="leftVbox" prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
-                <padding>
-                    <Insets top="5.0" />
-                </padding>
-                <Button fx:id="plusButton" mnemonicParsing="false" onAction="#addQuestion" prefWidth="100.0" text="+">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin></Button>
-            </VBox>
-        </left>
-        <right>
-          <VBox fx:id="rightVbox" prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER" />
-        </right>
         <top>
             <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
                 <Label text="Add a question">
@@ -52,5 +38,24 @@
             </right>
          </BorderPane>
       </bottom>
+      <center>
+         <BorderPane fx:id="scrlBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0">
+            <left>
+                  <VBox fx:id="leftVbox" prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                      <padding>
+                          <Insets top="5.0" />
+                      </padding>
+                      <Button fx:id="plusButton" mnemonicParsing="false" onAction="#addQuestion" prefWidth="100.0" text="+">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  </VBox>
+            </left>
+            <right>
+                <VBox fx:id="rightVbox" prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER" />
+            </right>
+         </BorderPane>
+      </center>
     </BorderPane>
 </AnchorPane>
