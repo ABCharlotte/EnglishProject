@@ -35,7 +35,6 @@ public class MenuController {
         stage.setHeight(height);
         stage.setWidth(width);
         stage.show();
-
     }
 
     @FXML

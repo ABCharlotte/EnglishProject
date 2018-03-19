@@ -22,23 +22,6 @@ public class LoadController extends MenuController{
         super.initialize();
     }
 
-    private void switchFXML(String name, String playername) throws IOException {
-        Stage stage;
-        Parent root;
-        //get reference to the button's stage
-        stage=(Stage) borderPane.getScene().getWindow();
-        double height=stage.getHeight();
-        double width=stage.getWidth();
-        //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getResource(name));
-        //create a new scene with root and setNum the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.setTitle(playername);
-        stage.show();
-    }
     public void handleCancel() throws IOException {
         this.switchFXML("fxml/Menu.fxml");
     }
@@ -47,6 +30,8 @@ public class LoadController extends MenuController{
         //System.out.println(this.textField.getText());
         JsonTools J = new JsonTools();
         J.load_player(this.textField.getText().toLowerCase());
-        this.switchFXML("fxml/Menu.fxml","English Project: "+J.getPlayer());
+        Stage stage= (Stage) this.borderPane.getScene().getWindow();
+        stage.setTitle("English Project: "+J.getPlayer());
+        super.switchFXML("fxml/Menu.fxml");
     }
 }
