@@ -58,13 +58,13 @@
     "theme": "Culture"
   },
   "1": {
-    "validated": false,
+    "validated": true,
     "question": "English Speaking Countries",
     "nature": "Text",
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "England"
         ],
@@ -75,7 +75,7 @@
       },
       {
         "number": 2,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "United States of America",
           "USA",
@@ -91,7 +91,7 @@
       },
       {
         "number": 3,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Australia"
         ],
@@ -102,7 +102,7 @@
       },
       {
         "number": 4,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "United Kingdom",
           "UK",
@@ -115,7 +115,7 @@
       },
       {
         "number": 5,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Ireland",
           "north ireland",
@@ -128,7 +128,7 @@
       },
       {
         "number": 6,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Scotland"
         ],
@@ -139,7 +139,7 @@
       },
       {
         "number": 7,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "India"
         ],
@@ -150,7 +150,7 @@
       },
       {
         "number": 8,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Canada"
         ],
@@ -161,7 +161,7 @@
       },
       {
         "number": 9,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "New Zealand",
           "Zealand"
@@ -173,7 +173,7 @@
       },
       {
         "number": 10,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "South Africa"
         ],
@@ -184,7 +184,7 @@
       },
       {
         "number": 11,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Wales"
         ],
@@ -282,13 +282,13 @@
     "theme": "Grammar"
   },
   "3": {
-    "validated": false,
+    "validated": true,
     "question": "src/data/images/raven_london.png",
     "nature": "Image",
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Ravens",
           "crow",
@@ -303,7 +303,7 @@
       },
       {
         "number": 2,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Tower of London",
           "London"
@@ -315,7 +315,7 @@
       },
       {
         "number": 3,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Crown",
           "Queen",
@@ -328,7 +328,7 @@
       },
       {
         "number": 4,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "United Kingdom",
           "uk",
@@ -342,7 +342,7 @@
       },
       {
         "number": 4,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Bobby",
           "Guard"
@@ -595,13 +595,13 @@
     "theme": "Culture"
   },
   "6": {
-    "validated": false,
+    "validated": true,
     "question": "Weather",
     "nature": "Text",
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Sunny",
           "Sun"
@@ -613,7 +613,7 @@
       },
       {
         "number": 2,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Cloudy",
           "Cloud"
@@ -625,7 +625,7 @@
       },
       {
         "number": 3,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Rainy",
           "Rain"
@@ -637,7 +637,7 @@
       },
       {
         "number": 4,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Snowy",
           "Snow"
@@ -649,7 +649,7 @@
       },
       {
         "number": 5,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Windy",
           "Wind"
@@ -661,7 +661,7 @@
       },
       {
         "number": 6,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Stormy",
           "Storm"
@@ -673,7 +673,7 @@
       },
       {
         "number": 7,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Foggy",
           "Fog"
@@ -709,7 +709,7 @@
       },
       {
         "number": 2,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Washington DC",
           "Washington"
@@ -849,106 +849,6 @@
     ],
     "theme": "Geography"
   },
-  "9": {
-    "validated": false,
-    "question": "src/data/images/BostonTeaParty.png",
-    "nature": "Image",
-    "answers": [
-      {
-        "number": 1,
-        "visibility": false,
-        "answer": [
-          "Amerindians",
-          "Amerindian",
-          "Red Man",
-          "American Indian",
-          "American Indians",
-          "Indian",
-          "Indians",
-          "Amerind",
-          "Amerinds"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "A _ _ _ _ _ _ _ _ _ _ _"
-        }
-      },
-      {
-        "number": 2,
-        "visibility": false,
-        "answer": [
-          "Revolution"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "R _ _ _ _ _ _ _ _ _ "
-        }
-      },
-      {
-        "number": 3,
-        "visibility": false,
-        "answer": [
-          "Tea Party"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "T _ _    P _ _ _ _"
-        }
-      },
-      {
-        "number": 4,
-        "visibility": false,
-        "answer": [
-          "Boston"
-        ],
-        "hint": {
-          "nature": "Image",
-          "is": "src/data/images/cities/bos.png"
-        }
-      },
-      {
-        "number": 5,
-        "visibility": false,
-        "answer": [
-          "Ship",
-          "Boat"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "S _ _ _"
-        }
-      },
-      {
-        "number": 6,
-        "visibility": false,
-        "answer": [
-          "United States of America",
-          "USA",
-          "u.s.a.",
-          "America",
-          "US",
-          "U.S.",
-          "United States"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "src/data/images/flags/usa.png"
-        }
-      },
-      {
-        "number": 7,
-        "visibility": false,
-        "answer": [
-          "Commodities"
-        ],
-        "hint": {
-          "nature": "Text",
-          "is": "C _ _ _ _ _ _ _ _ _ _ "
-        }
-      }
-    ],
-    "theme": "History"
-  },
   "8": {
     "validated": false,
     "question": "Famous Bands",
@@ -1050,7 +950,7 @@
         ],
         "hint": {
           "nature": "Text",
-          "is": "\"Baba O'Riley\""
+          "is": "\"Baba O\u0027Riley\""
         }
       },
       {
@@ -1066,5 +966,105 @@
       }
     ],
     "theme": "Culture"
+  },
+  "9": {
+    "validated": false,
+    "question": "src/data/images/BostonTeaParty.png",
+    "nature": "Image",
+    "answers": [
+      {
+        "number": 1,
+        "visibility": true,
+        "answer": [
+          "Amerindians",
+          "Amerindian",
+          "Red Man",
+          "American Indian",
+          "American Indians",
+          "Indian",
+          "Indians",
+          "Amerind",
+          "Amerinds"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "A _ _ _ _ _ _ _ _ _ _ _"
+        }
+      },
+      {
+        "number": 2,
+        "visibility": false,
+        "answer": [
+          "Revolution"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "R _ _ _ _ _ _ _ _ _ "
+        }
+      },
+      {
+        "number": 3,
+        "visibility": true,
+        "answer": [
+          "Tea Party"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "T _ _    P _ _ _ _"
+        }
+      },
+      {
+        "number": 4,
+        "visibility": true,
+        "answer": [
+          "Boston"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/bos.png"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Ship",
+          "Boat"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "S _ _ _"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "United States of America",
+          "USA",
+          "u.s.a.",
+          "America",
+          "US",
+          "U.S.",
+          "United States"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "src/data/images/flags/usa.png"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "Commodities"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "C _ _ _ _ _ _ _ _ _ _ "
+        }
+      }
+    ],
+    "theme": "History"
   }
 }

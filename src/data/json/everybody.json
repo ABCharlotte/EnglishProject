@@ -330,9 +330,9 @@
         "number": 4,
         "visibility": false,
         "answer": [
-          "England",
           "United Kingdom",
           "uk",
+          "England",
           "U.K."
         ],
         "hint": {
@@ -858,15 +858,114 @@
         "number": 1,
         "visibility": false,
         "answer": [
-          "1"
+          "Beatles"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/image/beat.png"
+        }
+      },
+      {
+        "number": 2,
+        "visibility": false,
+        "answer": [
+          "Queen"
         ],
         "hint": {
           "nature": "Text",
-          "is": "1"
+          "is": "\"Bohemian Rhapsody\""
+        }
+      },
+      {
+        "number": 3,
+        "visibility": false,
+        "answer": [
+          "U2"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "\"With or Without You\""
+        }
+      },
+      {
+        "number": 4,
+        "visibility": false,
+        "answer": [
+          "Rolling Stone"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/image/rs.png"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Muse"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "The olympic games 2012 official song."
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "Radiohead"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "R _ _ _ _ _ _ _ D"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "Oasis"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "\"Wonderwall\""
+        }
+      },
+      {
+        "number": 8,
+        "visibility": false,
+        "answer": [
+          "Led Zepplin"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/image/lz.png"
+        }
+      },
+      {
+        "number": 9,
+        "visibility": false,
+        "answer": [
+          "The Who"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "\"Baba O\u0027Riley\""
+        }
+      },
+      {
+        "number": 10,
+        "visibility": false,
+        "answer": [
+          "Pink Floyd"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/pf.png"
         }
       }
     ],
-    "theme": "CultureTODO"
+    "theme": "Culture"
   },
   "9": {
     "validated": false,
@@ -877,14 +976,95 @@
         "number": 1,
         "visibility": false,
         "answer": [
-          "1"
+          "Amerindians",
+          "Amerindian",
+          "Red Man",
+          "American Indian",
+          "American Indians",
+          "Indian",
+          "Indians",
+          "Amerind",
+          "Amerinds"
         ],
         "hint": {
           "nature": "Text",
-          "is": "1"
+          "is": "A _ _ _ _ _ _ _ _ _ _ _"
+        }
+      },
+      {
+        "number": 2,
+        "visibility": false,
+        "answer": [
+          "Revolution"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "R _ _ _ _ _ _ _ _ _ "
+        }
+      },
+      {
+        "number": 3,
+        "visibility": false,
+        "answer": [
+          "Tea Party"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "T _ _    P _ _ _ _"
+        }
+      },
+      {
+        "number": 4,
+        "visibility": false,
+        "answer": [
+          "Boston"
+        ],
+        "hint": {
+          "nature": "Image",
+          "is": "src/data/images/cities/bos.png"
+        }
+      },
+      {
+        "number": 5,
+        "visibility": false,
+        "answer": [
+          "Ship",
+          "Boat"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "S _ _ _"
+        }
+      },
+      {
+        "number": 6,
+        "visibility": false,
+        "answer": [
+          "United States of America",
+          "USA",
+          "u.s.a.",
+          "America",
+          "US",
+          "U.S.",
+          "United States"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "src/data/images/flags/usa.png"
+        }
+      },
+      {
+        "number": 7,
+        "visibility": false,
+        "answer": [
+          "Commodities"
+        ],
+        "hint": {
+          "nature": "Text",
+          "is": "C _ _ _ _ _ _ _ _ _ _ "
         }
       }
     ],
-    "theme": "HistoryTODO"
+    "theme": "History"
   }
 }
