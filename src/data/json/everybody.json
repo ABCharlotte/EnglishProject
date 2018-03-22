@@ -856,18 +856,18 @@
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Beatles"
         ],
         "hint": {
           "nature": "Image",
-          "is": "src/data/image/beat.png"
+          "is": "src/data/images/beat.png"
         }
       },
       {
         "number": 2,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Queen"
         ],
@@ -889,13 +889,13 @@
       },
       {
         "number": 4,
-        "visibility": false,
+        "visibility": true,
         "answer": [
-          "Rolling Stone"
+          "Rolling Stones"
         ],
         "hint": {
           "nature": "Image",
-          "is": "src/data/image/rs.png"
+          "is": "src/data/images/rs.png"
         }
       },
       {
@@ -922,7 +922,7 @@
       },
       {
         "number": 7,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Oasis"
         ],
@@ -939,7 +939,7 @@
         ],
         "hint": {
           "nature": "Image",
-          "is": "src/data/image/lz.png"
+          "is": "src/data/images/lz.png"
         }
       },
       {
