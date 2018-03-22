@@ -1,9 +1,6 @@
 package code;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -11,13 +8,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 import org.json.simple.parser.ParseException;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 public class QuestionController extends Controller {
     public Button BackButton;
@@ -55,7 +50,7 @@ public class QuestionController extends Controller {
 
     }
 
-    private void updateAnswers() {
+    public void updateAnswers() {
             super.setRow(0);
             super.setColumn(0);
             this.GridAnswers.getChildren().clear();
