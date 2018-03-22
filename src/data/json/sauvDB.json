@@ -962,7 +962,7 @@
         ],
         "hint": {
           "nature": "Image",
-          "is": "src/data/image/beat.png"
+          "is": "src/data/images/beat.png"
         }
       },
       {
@@ -995,7 +995,7 @@
         ],
         "hint": {
           "nature": "Image",
-          "is": "src/data/image/rs.png"
+          "is": "src/data/images/rs.png"
         }
       },
       {
@@ -1039,7 +1039,7 @@
         ],
         "hint": {
           "nature": "Image",
-          "is": "src/data/image/lz.png"
+          "is": "src/data/images/lz.png"
         }
       },
       {
