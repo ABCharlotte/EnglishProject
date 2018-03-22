@@ -5,6 +5,9 @@
       <element id="module-output" name="EnglishProject" />
       <element id="extracted-dir" path="$PROJECT_DIR$/src/libraries/java-json.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/src/libraries/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libraries/gson-2.8.2-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libraries/gson-2.8.2-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libraries/gson-2.8.2.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
