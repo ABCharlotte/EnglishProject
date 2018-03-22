@@ -288,7 +288,7 @@
     "answers": [
       {
         "number": 1,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Ravens",
           "crow",
@@ -878,7 +878,7 @@
       },
       {
         "number": 3,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "U2"
         ],

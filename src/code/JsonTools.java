@@ -132,7 +132,7 @@ public class JsonTools {
         }
     }
 
-    private void json_create(String player) throws IOException, ParseException {
+    public void json_create(String player) throws IOException, ParseException {
         filePath = "src/data/json/"+player.toLowerCase()+".json";
         FileReader reader = new FileReader("src/data/json/sauvDB.json");
         JSONParser jsonParser = new JSONParser();
