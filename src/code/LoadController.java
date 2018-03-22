@@ -1,8 +1,5 @@
 package code;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -31,7 +28,7 @@ public class LoadController extends MenuController{
         JsonTools J = new JsonTools();
         J.load_player(this.textField.getText().toLowerCase());
         Stage stage= (Stage) this.borderPane.getScene().getWindow();
-        stage.setTitle("English Project: "+J.getPlayer());
+        stage.setTitle("Guess What "+J.getPlayer()+" ?");
         super.switchFXML("fxml/Menu.fxml");
     }
 }

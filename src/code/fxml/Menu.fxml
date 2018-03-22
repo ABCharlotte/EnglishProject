@@ -22,7 +22,7 @@
        </VBox>
    </center>
    <top>
-      <Label text="English Project" BorderPane.alignment="CENTER">
+      <Label text="Guess What ?" BorderPane.alignment="CENTER">
          <font>
             <Font size="60.0" />
          </font>

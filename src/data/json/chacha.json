@@ -1026,7 +1026,7 @@
       },
       {
         "number": 5,
-        "visibility": false,
+        "visibility": true,
         "answer": [
           "Ship",
           "Boat"
